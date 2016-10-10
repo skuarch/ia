@@ -16,11 +16,14 @@ Test: http://localhost:8080
 
 Requirements: 
 
-* Node 4.6
+* Node 4.6 (https://nodejs.org/en/download/)
 * Ionic 2
+```sh
+$ npm install -g ionic
+$ npm install -g cordova
+```
 
 Test application:
 ```sh
 $ ionic serve
 ```
-
