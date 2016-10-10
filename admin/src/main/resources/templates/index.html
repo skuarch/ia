@@ -1,0 +1,72 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>Policy admin</title>
+<link href='http://fonts.googleapis.com/css?family=Karla:400,700'
+	rel='stylesheet' type='text/css' />
+<link rel="stylesheet" th:href="@{/css/bootstrap.css}"
+	href="../../css/bootstrap.css" type="text/css" />
+<link rel="stylesheet" th:href="@{/css/font-awesome.css}"
+	href="../../css//font-awesome.css" type="text/css" />
+<link rel="stylesheet" th:href="@{/css/wysihtml5.css}"
+	href="../../css//wysihtml5.css" type="text/css" />
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"
+	href="../../css/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" th:href="@{/css/editor.css}"
+	href="../../css/editor.css" type="text/css" />
+<link rel="stylesheet" th:href="@{/css/prettify.css}"
+	href="../../css/prettify.css" type="text/css" />
+</head>
+
+<body>
+	<div id="main">
+		<header id="page-header">
+			<h1 class="container">Policy admin</h1>
+		</header>
+		<div class="container">
+			<section class="hero-unit">
+				<div id="editor">
+					<form action="#" th:action="@{/}" th:object="${policy}"
+						method="post">
+						<p th:text="#{title}"></p>
+						<textarea th:field="*{title}" name="title" id="wysihtml5-editor"
+							spellcheck="false" wrap="off" autofocus="true"></textarea>
+						<p th:text="#{locale}"></p>
+						<input type="text" th:field="*{locale}" name="locale"></input>
+						<p>
+							<input type="submit" value="Submit" />
+						</p>
+						<input type="hidden" name="id" th:field="*{id}"></input> <input
+							type="hidden" name="rev" th:field="*{rev}"></input>
+					</form>
+				</div>
+
+
+				<p th:text="#{policies}"></p>
+				<div th:each="policy : ${policies}" th:unless="${#strings.startsWith(policy,'_design')}">
+					<label th:text="${policy}"></label> <a th:href="@{'/' + ${policy}}"
+						th:unless="${#strings.startsWith(policy,'_design')}">edit</a> <a
+						th:href="@{'/delete/' + ${policy}}"
+						th:unless="${#strings.startsWith(policy,'_design')}">delete</a> <br />
+				</div>
+
+			</section>
+		</div>
+	</div>
+	<script
+		src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script th:src="@{js/jquery.Jcrop.js}"></script>
+	<script th:src="@{js/wysihtml5-0.3.0.js}"></script>
+	<script th:src="@{js/wysihtml5-enhanced.js}"></script>
+	<script>
+		$(document).ready(function() {
+			$('#wysihtml5-editor').wysiHTML5N({
+				stylesheets : [ 'stylesheets/editor.css' ]
+			});
+		});
+	</script>
+</body>
+
+</html>
