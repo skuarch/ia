@@ -36,8 +36,8 @@ export class MyApp {
       };
 
       if (window["plugins"]) {
-        window["plugins"].OneSignal.init("4acbeed2-941e-4dbf-9e3a-d47cf69fc4de",
-          { googleProjectNumber: "166579804246" },
+        window["plugins"].OneSignal.init("2a9cbe61-3dd7-4b61-b0e4-bb1ec7f2163d",
+          { googleProjectNumber: "739697796337" },
           notificationOpenedCallback);
 
         // Show an alert box if a notification comes in when the user is in your app.
