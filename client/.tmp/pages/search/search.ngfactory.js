@@ -20,31 +20,35 @@ import * as import10 from '@angular/core/src/linker/component_factory';
 import * as import11 from 'ionic-angular/components/toolbar/toolbar';
 import * as import12 from 'ionic-angular/components/navbar/navbar';
 import * as import13 from 'ionic-angular/components/toolbar/toolbar-title';
-import * as import14 from 'ionic-angular/components/content/content';
-import * as import15 from 'ionic-angular/components/searchbar/searchbar';
-import * as import16 from 'ionic-angular/components/list/list';
-import * as import17 from '@angular/common/src/directives/ng_for';
-import * as import18 from 'ionic-angular/config/config';
-import * as import19 from '@angular/core/src/linker/element_ref';
-import * as import20 from 'ionic-angular/navigation/view-controller';
-import * as import21 from '../../node_modules/ionic-angular/components/navbar/navbar.ngfactory';
-import * as import22 from 'ionic-angular/components/app/app';
-import * as import23 from 'ionic-angular/navigation/nav-controller';
-import * as import24 from '../../node_modules/ionic-angular/components/toolbar/toolbar-title.ngfactory';
-import * as import25 from '../../node_modules/ionic-angular/components/content/content.ngfactory';
-import * as import26 from 'ionic-angular/util/keyboard';
-import * as import27 from '@angular/core/src/zone/ng_zone';
-import * as import28 from 'ionic-angular/components/tabs/tabs';
-import * as import29 from '../../node_modules/ionic-angular/components/searchbar/searchbar.ngfactory';
-import * as import30 from '@angular/forms/src/directives/ng_control';
-import * as import31 from 'ionic-angular/gestures/gesture-controller';
-import * as import32 from '@angular/core/src/linker/template_ref';
-import * as import33 from '@angular/core/src/change_detection/differs/iterable_differs';
-import * as import34 from 'ionic-angular/components/item/item';
-import * as import35 from '@angular/core/src/linker/query_list';
-import * as import36 from '../../node_modules/ionic-angular/components/item/item.ngfactory';
-import * as import37 from 'ionic-angular/util/form';
-import * as import38 from '@angular/core/src/security';
+import * as import14 from 'ionic-angular/components/toolbar/toolbar-item';
+import * as import15 from '@angular/core/src/linker/query_list';
+import * as import16 from 'ionic-angular/components/menu/menu-toggle';
+import * as import17 from 'ionic-angular/components/icon/icon';
+import * as import18 from 'ionic-angular/components/content/content';
+import * as import19 from 'ionic-angular/components/searchbar/searchbar';
+import * as import20 from 'ionic-angular/components/list/list';
+import * as import21 from '@angular/common/src/directives/ng_for';
+import * as import22 from 'ionic-angular/config/config';
+import * as import23 from '@angular/core/src/linker/element_ref';
+import * as import24 from 'ionic-angular/navigation/view-controller';
+import * as import25 from '../../node_modules/ionic-angular/components/navbar/navbar.ngfactory';
+import * as import26 from 'ionic-angular/components/app/app';
+import * as import27 from 'ionic-angular/navigation/nav-controller';
+import * as import28 from '../../node_modules/ionic-angular/components/toolbar/toolbar-title.ngfactory';
+import * as import29 from 'ionic-angular/components/menu/menu-controller';
+import * as import30 from '../../node_modules/ionic-angular/components/content/content.ngfactory';
+import * as import31 from 'ionic-angular/util/keyboard';
+import * as import32 from '@angular/core/src/zone/ng_zone';
+import * as import33 from 'ionic-angular/components/tabs/tabs';
+import * as import34 from '../../node_modules/ionic-angular/components/searchbar/searchbar.ngfactory';
+import * as import35 from '@angular/forms/src/directives/ng_control';
+import * as import36 from 'ionic-angular/gestures/gesture-controller';
+import * as import37 from '@angular/core/src/linker/template_ref';
+import * as import38 from '@angular/core/src/change_detection/differs/iterable_differs';
+import * as import39 from 'ionic-angular/components/item/item';
+import * as import40 from '../../node_modules/ionic-angular/components/item/item.ngfactory';
+import * as import41 from 'ionic-angular/util/form';
+import * as import42 from '@angular/core/src/security';
 var renderType_Search_Host = null;
 var _View_Search_Host0 = (function (_super) {
     __extends(_View_Search_Host0, _super);
@@ -86,83 +90,107 @@ var _View_Search0 = (function (_super) {
     _View_Search0.prototype.createInternal = function (rootSelector) {
         var parentRenderNode = this.renderer.createViewRoot(this.declarationAppElement.nativeElement);
         this._el_0 = this.renderer.createElement(parentRenderNode, 'ion-header', null);
-        this._Header_0_3 = new import11.Header(this.parentInjector.get(import18.Config), new import19.ElementRef(this._el_0), this.renderer, this.parentInjector.get(import20.ViewController, null));
+        this._Header_0_3 = new import11.Header(this.parentInjector.get(import22.Config), new import23.ElementRef(this._el_0), this.renderer, this.parentInjector.get(import24.ViewController, null));
         this._text_1 = this.renderer.createText(this._el_0, '\n    ', null);
         this._el_2 = this.renderer.createElement(this._el_0, 'ion-navbar', null);
         this.renderer.setElementAttribute(this._el_2, 'class', 'toolbar');
         this.renderer.setElementAttribute(this._el_2, 'no-border-bottom', '');
         this.renderer.setElementAttribute(this._el_2, 'secondary', '');
         this._appEl_2 = new import2.AppElement(2, 0, this, this._el_2);
-        var compView_2 = import21.viewFactory_Navbar0(this.viewUtils, this.injector(2), this._appEl_2);
-        this._Navbar_2_4 = new import12.Navbar(this.parentInjector.get(import22.App), this.parentInjector.get(import20.ViewController, null), this.parentInjector.get(import23.NavController, null), this.parentInjector.get(import18.Config), new import19.ElementRef(this._el_2), this.renderer);
+        var compView_2 = import25.viewFactory_Navbar0(this.viewUtils, this.injector(2), this._appEl_2);
+        this._Navbar_2_4 = new import12.Navbar(this.parentInjector.get(import26.App), this.parentInjector.get(import24.ViewController, null), this.parentInjector.get(import27.NavController, null), this.parentInjector.get(import22.Config), new import23.ElementRef(this._el_2), this.renderer);
         this._appEl_2.initComponent(this._Navbar_2_4, [], compView_2);
         this._text_3 = this.renderer.createText(null, '\n        ', null);
         this._el_4 = this.renderer.createElement(null, 'ion-title', null);
         this._appEl_4 = new import2.AppElement(4, 2, this, this._el_4);
-        var compView_4 = import24.viewFactory_ToolbarTitle0(this.viewUtils, this.injector(4), this._appEl_4);
-        this._ToolbarTitle_4_4 = new import13.ToolbarTitle(this.parentInjector.get(import18.Config), new import19.ElementRef(this._el_4), this.renderer, this.parentInjector.get(import11.Toolbar, null), this._Navbar_2_4);
+        var compView_4 = import28.viewFactory_ToolbarTitle0(this.viewUtils, this.injector(4), this._appEl_4);
+        this._ToolbarTitle_4_4 = new import13.ToolbarTitle(this.parentInjector.get(import22.Config), new import23.ElementRef(this._el_4), this.renderer, this.parentInjector.get(import11.Toolbar, null), this._Navbar_2_4);
         this._appEl_4.initComponent(this._ToolbarTitle_4_4, [], compView_4);
-        this._text_5 = this.renderer.createText(null, '\n            Search\n        ', null);
+        this._text_5 = this.renderer.createText(null, 'Search', null);
         compView_4.create(this._ToolbarTitle_4_4, [[].concat([this._text_5])], null);
-        this._text_6 = this.renderer.createText(null, '\n    ', null);
+        this._text_6 = this.renderer.createText(null, '\n        ', null);
+        this._el_7 = this.renderer.createElement(null, 'ion-buttons', null);
+        this.renderer.setElementAttribute(this._el_7, 'end', '');
+        this._ToolbarItem_7_3 = new import14.ToolbarItem(this.parentInjector.get(import22.Config), new import23.ElementRef(this._el_7), this.renderer, this.parentInjector.get(import11.Toolbar, null), this._Navbar_2_4);
+        this._query_Button_7_0 = new import15.QueryList();
+        this._text_8 = this.renderer.createText(this._el_7, '\n            ', null);
+        this._el_9 = this.renderer.createElement(this._el_7, 'button', null);
+        this.renderer.setElementAttribute(this._el_9, 'menuToggle', '');
+        this._MenuToggle_9_3 = new import16.MenuToggle(this.parentInjector.get(import29.MenuController), new import23.ElementRef(this._el_9), this.parentInjector.get(import24.ViewController, null), this._Navbar_2_4);
+        this._ToolbarItem_9_4 = new import14.ToolbarItem(this.parentInjector.get(import22.Config), new import23.ElementRef(this._el_9), this.renderer, this.parentInjector.get(import11.Toolbar, null), this._Navbar_2_4);
+        this._query_Button_9_0 = new import15.QueryList();
+        this._text_10 = this.renderer.createText(this._el_9, '\n              ', null);
+        this._el_11 = this.renderer.createElement(this._el_9, 'ion-icon', null);
+        this.renderer.setElementAttribute(this._el_11, 'name', 'menu');
+        this.renderer.setElementAttribute(this._el_11, 'role', 'img');
+        this._Icon_11_3 = new import17.Icon(this.parentInjector.get(import22.Config), new import23.ElementRef(this._el_11), this.renderer);
+        this._text_12 = this.renderer.createText(this._el_9, '   \n            ', null);
+        this._text_13 = this.renderer.createText(this._el_7, '\n          ', null);
+        this._text_14 = this.renderer.createText(null, '\n    ', null);
         compView_2.create(this._Navbar_2_4, [
             [],
             [],
-            [],
+            [].concat([this._el_7]),
             [].concat([
                 this._text_3,
                 this._el_4,
-                this._text_6
+                this._text_6,
+                this._text_14
             ])
         ], null);
-        this._text_7 = this.renderer.createText(this._el_0, '\n', null);
-        this._text_8 = this.renderer.createText(parentRenderNode, '\n\n', null);
-        this._el_9 = this.renderer.createElement(parentRenderNode, 'ion-content', null);
-        this.renderer.setElementAttribute(this._el_9, 'class', 'home');
-        this._appEl_9 = new import2.AppElement(9, null, this, this._el_9);
-        var compView_9 = import25.viewFactory_Content0(this.viewUtils, this.injector(9), this._appEl_9);
-        this._Content_9_4 = new import14.Content(this.parentInjector.get(import18.Config), new import19.ElementRef(this._el_9), this.renderer, this.parentInjector.get(import22.App), this.parentInjector.get(import26.Keyboard), this.parentInjector.get(import27.NgZone), this.parentInjector.get(import20.ViewController, null), this.parentInjector.get(import28.Tabs, null));
-        this._appEl_9.initComponent(this._Content_9_4, [], compView_9);
-        this._text_10 = this.renderer.createText(null, '\n    ', null);
-        this._el_11 = this.renderer.createElement(null, 'ion-searchbar', null);
-        this._appEl_11 = new import2.AppElement(11, 9, this, this._el_11);
-        var compView_11 = import29.viewFactory_Searchbar0(this.viewUtils, this.injector(11), this._appEl_11);
-        this._Searchbar_11_4 = new import15.Searchbar(this.parentInjector.get(import18.Config), new import19.ElementRef(this._el_11), this.renderer, this.parentInjector.get(import30.NgControl, null));
-        this._appEl_11.initComponent(this._Searchbar_11_4, [], compView_11);
-        this._text_12 = this.renderer.createText(null, '\n    ', null);
-        compView_11.create(this._Searchbar_11_4, [], null);
-        this._text_13 = this.renderer.createText(null, '\n    ', null);
-        this._el_14 = this.renderer.createElement(null, 'ion-list', null);
-        this._List_14_3 = new import16.List(this.parentInjector.get(import18.Config), new import19.ElementRef(this._el_14), this.renderer, this.parentInjector.get(import31.GestureController));
-        this._text_15 = this.renderer.createText(this._el_14, '\n        ', null);
-        this._anchor_16 = this.renderer.createTemplateAnchor(this._el_14, null);
-        this._appEl_16 = new import2.AppElement(16, 14, this, this._anchor_16);
-        this._TemplateRef_16_5 = new import32.TemplateRef_(this._appEl_16, viewFactory_Search1);
-        this._NgFor_16_6 = new import17.NgFor(this._appEl_16.vcRef, this._TemplateRef_16_5, this.parentInjector.get(import33.IterableDiffers), this.ref);
-        this._text_17 = this.renderer.createText(this._el_14, '\n    ', null);
-        this._text_18 = this.renderer.createText(null, '\n', null);
-        compView_9.create(this._Content_9_4, [
+        this._text_15 = this.renderer.createText(this._el_0, '\n', null);
+        this._text_16 = this.renderer.createText(parentRenderNode, '\n\n', null);
+        this._el_17 = this.renderer.createElement(parentRenderNode, 'ion-content', null);
+        this.renderer.setElementAttribute(this._el_17, 'class', 'home');
+        this._appEl_17 = new import2.AppElement(17, null, this, this._el_17);
+        var compView_17 = import30.viewFactory_Content0(this.viewUtils, this.injector(17), this._appEl_17);
+        this._Content_17_4 = new import18.Content(this.parentInjector.get(import22.Config), new import23.ElementRef(this._el_17), this.renderer, this.parentInjector.get(import26.App), this.parentInjector.get(import31.Keyboard), this.parentInjector.get(import32.NgZone), this.parentInjector.get(import24.ViewController, null), this.parentInjector.get(import33.Tabs, null));
+        this._appEl_17.initComponent(this._Content_17_4, [], compView_17);
+        this._text_18 = this.renderer.createText(null, '\n    ', null);
+        this._el_19 = this.renderer.createElement(null, 'ion-searchbar', null);
+        this._appEl_19 = new import2.AppElement(19, 17, this, this._el_19);
+        var compView_19 = import34.viewFactory_Searchbar0(this.viewUtils, this.injector(19), this._appEl_19);
+        this._Searchbar_19_4 = new import19.Searchbar(this.parentInjector.get(import22.Config), new import23.ElementRef(this._el_19), this.renderer, this.parentInjector.get(import35.NgControl, null));
+        this._appEl_19.initComponent(this._Searchbar_19_4, [], compView_19);
+        this._text_20 = this.renderer.createText(null, '\n    ', null);
+        compView_19.create(this._Searchbar_19_4, [], null);
+        this._text_21 = this.renderer.createText(null, '\n    ', null);
+        this._el_22 = this.renderer.createElement(null, 'ion-list', null);
+        this._List_22_3 = new import20.List(this.parentInjector.get(import22.Config), new import23.ElementRef(this._el_22), this.renderer, this.parentInjector.get(import36.GestureController));
+        this._text_23 = this.renderer.createText(this._el_22, '\n        ', null);
+        this._anchor_24 = this.renderer.createTemplateAnchor(this._el_22, null);
+        this._appEl_24 = new import2.AppElement(24, 22, this, this._anchor_24);
+        this._TemplateRef_24_5 = new import37.TemplateRef_(this._appEl_24, viewFactory_Search1);
+        this._NgFor_24_6 = new import21.NgFor(this._appEl_24.vcRef, this._TemplateRef_24_5, this.parentInjector.get(import38.IterableDiffers), this.ref);
+        this._text_25 = this.renderer.createText(this._el_22, '\n    ', null);
+        this._text_26 = this.renderer.createText(null, '\n', null);
+        compView_17.create(this._Content_17_4, [
             [],
             [].concat([
-                this._text_10,
-                this._el_11,
-                this._text_13,
-                this._el_14,
-                this._text_18
+                this._text_18,
+                this._el_19,
+                this._text_21,
+                this._el_22,
+                this._text_26
             ]),
             []
         ], null);
         this._expr_0 = import7.UNINITIALIZED;
         this._expr_1 = import7.UNINITIALIZED;
-        this._expr_2 = import7.UNINITIALIZED;
-        var disposable_0 = this.renderer.listen(this._el_11, 'ionInput', this.eventHandler(this._handle_ionInput_11_0.bind(this)));
+        var disposable_0 = this.renderer.listen(this._el_9, 'click', this.eventHandler(this._handle_click_9_0.bind(this)));
+        this._expr_3 = import7.UNINITIALIZED;
         this._expr_4 = import7.UNINITIALIZED;
         this._expr_5 = import7.UNINITIALIZED;
         this._expr_6 = import7.UNINITIALIZED;
         this._expr_7 = import7.UNINITIALIZED;
-        this._expr_8 = import7.UNINITIALIZED;
-        var subscription_0 = this._Searchbar_11_4.ionInput.subscribe(this.eventHandler(this._handle_ionInput_11_0.bind(this)));
+        var disposable_1 = this.renderer.listen(this._el_19, 'ionInput', this.eventHandler(this._handle_ionInput_19_0.bind(this)));
         this._expr_9 = import7.UNINITIALIZED;
+        this._expr_10 = import7.UNINITIALIZED;
+        this._expr_11 = import7.UNINITIALIZED;
+        this._expr_12 = import7.UNINITIALIZED;
+        this._expr_13 = import7.UNINITIALIZED;
+        var subscription_0 = this._Searchbar_19_4.ionInput.subscribe(this.eventHandler(this._handle_ionInput_19_0.bind(this)));
+        this._expr_14 = import7.UNINITIALIZED;
         this.init([], [
             this._el_0,
             this._text_1,
@@ -171,73 +199,118 @@ var _View_Search0 = (function (_super) {
             this._el_4,
             this._text_5,
             this._text_6,
-            this._text_7,
+            this._el_7,
             this._text_8,
             this._el_9,
             this._text_10,
             this._el_11,
             this._text_12,
             this._text_13,
-            this._el_14,
+            this._text_14,
             this._text_15,
-            this._anchor_16,
-            this._text_17,
-            this._text_18
-        ], [disposable_0], [subscription_0]);
+            this._text_16,
+            this._el_17,
+            this._text_18,
+            this._el_19,
+            this._text_20,
+            this._text_21,
+            this._el_22,
+            this._text_23,
+            this._anchor_24,
+            this._text_25,
+            this._text_26
+        ], [
+            disposable_0,
+            disposable_1
+        ], [subscription_0]);
         return null;
     };
     _View_Search0.prototype.injectorGetInternal = function (token, requestNodeIndex, notFoundResult) {
         if (((token === import13.ToolbarTitle) && ((4 <= requestNodeIndex) && (requestNodeIndex <= 5)))) {
             return this._ToolbarTitle_4_4;
         }
-        if (((token === import12.Navbar) && ((2 <= requestNodeIndex) && (requestNodeIndex <= 6)))) {
+        if (((token === import17.Icon) && (11 === requestNodeIndex))) {
+            return this._Icon_11_3;
+        }
+        if (((token === import16.MenuToggle) && ((9 <= requestNodeIndex) && (requestNodeIndex <= 12)))) {
+            return this._MenuToggle_9_3;
+        }
+        if (((token === import14.ToolbarItem) && ((9 <= requestNodeIndex) && (requestNodeIndex <= 12)))) {
+            return this._ToolbarItem_9_4;
+        }
+        if (((token === import14.ToolbarItem) && ((7 <= requestNodeIndex) && (requestNodeIndex <= 13)))) {
+            return this._ToolbarItem_7_3;
+        }
+        if (((token === import12.Navbar) && ((2 <= requestNodeIndex) && (requestNodeIndex <= 14)))) {
             return this._Navbar_2_4;
         }
-        if (((token === import11.Header) && ((0 <= requestNodeIndex) && (requestNodeIndex <= 7)))) {
+        if (((token === import11.Header) && ((0 <= requestNodeIndex) && (requestNodeIndex <= 15)))) {
             return this._Header_0_3;
         }
-        if (((token === import15.Searchbar) && ((11 <= requestNodeIndex) && (requestNodeIndex <= 12)))) {
-            return this._Searchbar_11_4;
+        if (((token === import19.Searchbar) && ((19 <= requestNodeIndex) && (requestNodeIndex <= 20)))) {
+            return this._Searchbar_19_4;
         }
-        if (((token === import32.TemplateRef) && (16 === requestNodeIndex))) {
-            return this._TemplateRef_16_5;
+        if (((token === import37.TemplateRef) && (24 === requestNodeIndex))) {
+            return this._TemplateRef_24_5;
         }
-        if (((token === import17.NgFor) && (16 === requestNodeIndex))) {
-            return this._NgFor_16_6;
+        if (((token === import21.NgFor) && (24 === requestNodeIndex))) {
+            return this._NgFor_24_6;
         }
-        if (((token === import16.List) && ((14 <= requestNodeIndex) && (requestNodeIndex <= 17)))) {
-            return this._List_14_3;
+        if (((token === import20.List) && ((22 <= requestNodeIndex) && (requestNodeIndex <= 25)))) {
+            return this._List_22_3;
         }
-        if (((token === import14.Content) && ((9 <= requestNodeIndex) && (requestNodeIndex <= 18)))) {
-            return this._Content_9_4;
+        if (((token === import18.Content) && ((17 <= requestNodeIndex) && (requestNodeIndex <= 26)))) {
+            return this._Content_17_4;
         }
         return notFoundResult;
     };
     _View_Search0.prototype.detectChangesInternal = function (throwOnChange) {
         var changes = null;
-        if (((this.numberOfChecks === 0) && !throwOnChange)) {
-            this._Content_9_4.ngOnInit();
+        var currVal_3 = '';
+        if (import4.checkBinding(throwOnChange, this._expr_3, currVal_3)) {
+            this._MenuToggle_9_3.menuToggle = currVal_3;
+            this._expr_3 = currVal_3;
+        }
+        var currVal_5 = 'menu';
+        if (import4.checkBinding(throwOnChange, this._expr_5, currVal_5)) {
+            this._Icon_11_3.name = currVal_5;
+            this._expr_5 = currVal_5;
         }
         if (((this.numberOfChecks === 0) && !throwOnChange)) {
-            this._Searchbar_11_4.ngOnInit();
+            this._Content_17_4.ngOnInit();
+        }
+        if (((this.numberOfChecks === 0) && !throwOnChange)) {
+            this._Searchbar_19_4.ngOnInit();
         }
         changes = null;
-        var currVal_9 = this.context.items;
-        if (import4.checkBinding(throwOnChange, this._expr_9, currVal_9)) {
-            this._NgFor_16_6.ngForOf = currVal_9;
+        var currVal_14 = this.context.items;
+        if (import4.checkBinding(throwOnChange, this._expr_14, currVal_14)) {
+            this._NgFor_24_6.ngForOf = currVal_14;
             if ((changes === null)) {
                 (changes = {});
             }
-            changes['ngForOf'] = new import7.SimpleChange(this._expr_9, currVal_9);
-            this._expr_9 = currVal_9;
+            changes['ngForOf'] = new import7.SimpleChange(this._expr_14, currVal_14);
+            this._expr_14 = currVal_14;
         }
         if ((changes !== null)) {
-            this._NgFor_16_6.ngOnChanges(changes);
+            this._NgFor_24_6.ngOnChanges(changes);
         }
         if (!throwOnChange) {
-            this._NgFor_16_6.ngDoCheck();
+            this._NgFor_24_6.ngDoCheck();
         }
         this.detectContentChildrenChanges(throwOnChange);
+        if (!throwOnChange) {
+            if (this._query_Button_9_0.dirty) {
+                this._query_Button_9_0.reset([]);
+                this._ToolbarItem_9_4._buttons = this._query_Button_9_0;
+                this._query_Button_9_0.notifyOnChanges();
+            }
+            if (this._query_Button_7_0.dirty) {
+                this._query_Button_7_0.reset([]);
+                this._ToolbarItem_7_3._buttons = this._query_Button_7_0;
+                this._query_Button_7_0.notifyOnChanges();
+            }
+        }
         var currVal_0 = this._Navbar_2_4._hidden;
         if (import4.checkBinding(throwOnChange, this._expr_0, currVal_0)) {
             this.renderer.setElementProperty(this._el_2, 'hidden', currVal_0);
@@ -248,48 +321,64 @@ var _View_Search0 = (function (_super) {
             this.renderer.setElementClass(this._el_2, 'statusbar-padding', currVal_1);
             this._expr_1 = currVal_1;
         }
-        var currVal_2 = this._Content_9_4._sbPadding;
-        if (import4.checkBinding(throwOnChange, this._expr_2, currVal_2)) {
-            this.renderer.setElementClass(this._el_9, 'statusbar-padding', currVal_2);
-            this._expr_2 = currVal_2;
-        }
-        var currVal_4 = this._Searchbar_11_4._value;
+        var currVal_4 = this._MenuToggle_9_3.isHidden;
         if (import4.checkBinding(throwOnChange, this._expr_4, currVal_4)) {
-            this.renderer.setElementClass(this._el_11, 'searchbar-has-value', currVal_4);
+            this.renderer.setElementProperty(this._el_9, 'hidden', currVal_4);
             this._expr_4 = currVal_4;
         }
-        var currVal_5 = this._Searchbar_11_4._isActive;
-        if (import4.checkBinding(throwOnChange, this._expr_5, currVal_5)) {
-            this.renderer.setElementClass(this._el_11, 'searchbar-active', currVal_5);
-            this._expr_5 = currVal_5;
-        }
-        var currVal_6 = this._Searchbar_11_4.showCancelButton;
+        var currVal_6 = this._Icon_11_3._hidden;
         if (import4.checkBinding(throwOnChange, this._expr_6, currVal_6)) {
-            this.renderer.setElementClass(this._el_11, 'searchbar-show-cancel', currVal_6);
+            this.renderer.setElementClass(this._el_11, 'hide', currVal_6);
             this._expr_6 = currVal_6;
         }
-        var currVal_7 = this._Searchbar_11_4.shouldAlignLeft();
+        var currVal_7 = this._Content_17_4._sbPadding;
         if (import4.checkBinding(throwOnChange, this._expr_7, currVal_7)) {
-            this.renderer.setElementClass(this._el_11, 'searchbar-left-aligned', currVal_7);
+            this.renderer.setElementClass(this._el_17, 'statusbar-padding', currVal_7);
             this._expr_7 = currVal_7;
         }
-        var currVal_8 = this._Searchbar_11_4._sbHasFocus;
-        if (import4.checkBinding(throwOnChange, this._expr_8, currVal_8)) {
-            this.renderer.setElementClass(this._el_11, 'searchbar-has-focus', currVal_8);
-            this._expr_8 = currVal_8;
+        var currVal_9 = this._Searchbar_19_4._value;
+        if (import4.checkBinding(throwOnChange, this._expr_9, currVal_9)) {
+            this.renderer.setElementClass(this._el_19, 'searchbar-has-value', currVal_9);
+            this._expr_9 = currVal_9;
+        }
+        var currVal_10 = this._Searchbar_19_4._isActive;
+        if (import4.checkBinding(throwOnChange, this._expr_10, currVal_10)) {
+            this.renderer.setElementClass(this._el_19, 'searchbar-active', currVal_10);
+            this._expr_10 = currVal_10;
+        }
+        var currVal_11 = this._Searchbar_19_4.showCancelButton;
+        if (import4.checkBinding(throwOnChange, this._expr_11, currVal_11)) {
+            this.renderer.setElementClass(this._el_19, 'searchbar-show-cancel', currVal_11);
+            this._expr_11 = currVal_11;
+        }
+        var currVal_12 = this._Searchbar_19_4.shouldAlignLeft();
+        if (import4.checkBinding(throwOnChange, this._expr_12, currVal_12)) {
+            this.renderer.setElementClass(this._el_19, 'searchbar-left-aligned', currVal_12);
+            this._expr_12 = currVal_12;
+        }
+        var currVal_13 = this._Searchbar_19_4._sbHasFocus;
+        if (import4.checkBinding(throwOnChange, this._expr_13, currVal_13)) {
+            this.renderer.setElementClass(this._el_19, 'searchbar-has-focus', currVal_13);
+            this._expr_13 = currVal_13;
         }
         this.detectViewChildrenChanges(throwOnChange);
         if (!throwOnChange) {
             if ((this.numberOfChecks === 0)) {
                 this._Navbar_2_4.ngAfterViewInit();
             }
-            this._Searchbar_11_4.ngAfterViewChecked();
+            this._Searchbar_19_4.ngAfterViewChecked();
         }
     };
     _View_Search0.prototype.destroyInternal = function () {
-        this._Content_9_4.ngOnDestroy();
+        this._Icon_11_3.ngOnDestroy();
+        this._Content_17_4.ngOnDestroy();
     };
-    _View_Search0.prototype._handle_ionInput_11_0 = function ($event) {
+    _View_Search0.prototype._handle_click_9_0 = function ($event) {
+        this.markPathToRootAsCheckOnce();
+        var pd_0 = (this._MenuToggle_9_3.toggle() !== false);
+        return (true && pd_0);
+    };
+    _View_Search0.prototype._handle_ionInput_19_0 = function ($event) {
         this.markPathToRootAsCheckOnce();
         var pd_0 = (this.context.getItems($event) !== false);
         return (true && pd_0);
@@ -311,12 +400,12 @@ var _View_Search1 = (function (_super) {
         this._el_0 = this.renderer.createElement(null, 'ion-item', null);
         this.renderer.setElementAttribute(this._el_0, 'class', 'item item-block');
         this._appEl_0 = new import2.AppElement(0, null, this, this._el_0);
-        var compView_0 = import36.viewFactory_Item0(this.viewUtils, this.injector(0), this._appEl_0);
-        this._Item_0_4 = new import34.Item(this.parent.parentInjector.get(import37.Form), this.parent.parentInjector.get(import18.Config), new import19.ElementRef(this._el_0), this.renderer);
-        this._ItemContent_0_5 = new import34.ItemContent();
-        this._query_Label_0_0 = new import35.QueryList();
-        this._query_Button_0_1 = new import35.QueryList();
-        this._query_Icon_0_2 = new import35.QueryList();
+        var compView_0 = import40.viewFactory_Item0(this.viewUtils, this.injector(0), this._appEl_0);
+        this._Item_0_4 = new import39.Item(this.parent.parentInjector.get(import41.Form), this.parent.parentInjector.get(import22.Config), new import23.ElementRef(this._el_0), this.renderer);
+        this._ItemContent_0_5 = new import39.ItemContent();
+        this._query_Label_0_0 = new import15.QueryList();
+        this._query_Button_0_1 = new import15.QueryList();
+        this._query_Icon_0_2 = new import15.QueryList();
         this._appEl_0.initComponent(this._Item_0_4, [], compView_0);
         this._text_1 = this.renderer.createText(null, '\n            ', null);
         this._el_2 = this.renderer.createElement(null, 'div', null);
@@ -344,10 +433,10 @@ var _View_Search1 = (function (_super) {
         return null;
     };
     _View_Search1.prototype.injectorGetInternal = function (token, requestNodeIndex, notFoundResult) {
-        if (((token === import34.Item) && ((0 <= requestNodeIndex) && (requestNodeIndex <= 3)))) {
+        if (((token === import39.Item) && ((0 <= requestNodeIndex) && (requestNodeIndex <= 3)))) {
             return this._Item_0_4;
         }
-        if (((token === import34.ItemContent) && ((0 <= requestNodeIndex) && (requestNodeIndex <= 3)))) {
+        if (((token === import39.ItemContent) && ((0 <= requestNodeIndex) && (requestNodeIndex <= 3)))) {
             return this._ItemContent_0_5;
         }
         return notFoundResult;
@@ -371,7 +460,7 @@ var _View_Search1 = (function (_super) {
         }
         var currVal_0 = this.context.$implicit.highlighting.title;
         if (import4.checkBinding(throwOnChange, this._expr_0, currVal_0)) {
-            this.renderer.setElementProperty(this._el_2, 'innerHTML', this.viewUtils.sanitizer.sanitize(import38.SecurityContext.HTML, currVal_0));
+            this.renderer.setElementProperty(this._el_2, 'innerHTML', this.viewUtils.sanitizer.sanitize(import42.SecurityContext.HTML, currVal_0));
             this._expr_0 = currVal_0;
         }
         this.detectViewChildrenChanges(throwOnChange);

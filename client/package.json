@@ -10,7 +10,9 @@
     "emulate:before": "build",
     "deploy:before": "build",
     "build:before": "build",
-    "run:before": "build"
+    "run:before": "build",
+    "electron": "electron .",
+    "electron dist": "electron ."
   },
   "config": {
     "ionic_rollup": "./scripts/rollup.config.js"
@@ -38,5 +40,6 @@
     "cordova-plugin-statusbar",
     "ionic-plugin-keyboard"
   ],
-  "cordovaPlatforms": []
+  "cordovaPlatforms": [],
+  "main": "electron.js"
 }

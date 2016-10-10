@@ -16,7 +16,7 @@ export class Policies {
     this.zone = zone;
     this.db = new PouchDB('cloudo');
 
-    this.remote = 'http://localhost:15984/policies';
+    this.remote = 'https://jccastrejon.cloudant.com/policy';
     this.db.sync(this.remote, {
       live: true,
       retry: true,

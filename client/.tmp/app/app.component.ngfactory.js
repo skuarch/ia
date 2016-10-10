@@ -160,7 +160,7 @@ var _View_MyApp0 = (function (_super) {
                 this._el_11,
                 this._text_18
             ])], null);
-        this._text_19 = this.renderer.createText(parentRenderNode, '\n\n', null);
+        this._text_19 = this.renderer.createText(parentRenderNode, '\n\n\n\n', null);
         this._text_20 = this.renderer.createText(parentRenderNode, '\n', null);
         this._el_21 = this.renderer.createElement(parentRenderNode, 'ion-nav', null);
         this.renderer.setElementAttribute(this._el_21, 'swipeBackEnabled', 'true');

@@ -203,7 +203,7 @@ class _View_MyApp0 extends import1.AppView<import3.MyApp> {
         this._text_18
       ]
     )],(null as any));
-    this._text_19 = this.renderer.createText(parentRenderNode,'\n\n',(null as any));
+    this._text_19 = this.renderer.createText(parentRenderNode,'\n\n\n\n',(null as any));
     this._text_20 = this.renderer.createText(parentRenderNode,'\n',(null as any));
     this._el_21 = this.renderer.createElement(parentRenderNode,'ion-nav',(null as any));
     this.renderer.setElementAttribute(this._el_21,'swipeBackEnabled','true');
