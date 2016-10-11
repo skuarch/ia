@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class CloudoadminApplicationTests {
+public class PolicyAdminApplicationTests {
 
 	@Test
 	public void contextLoads() {

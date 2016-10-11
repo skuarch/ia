@@ -6,9 +6,9 @@
 	<groupId>com.astrazeneca</groupId>
 	<artifactId>policyadmin</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 
-	<name>cloudoadmin</name>
+	<name>policyadmin</name>
 	<description>Policy Admin</description>
 
 	<parent>
