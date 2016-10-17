@@ -90,6 +90,7 @@ import * as import82 from '@angular/core/src/change_detection/differs/keyvalue_d
 import * as import83 from '@angular/http/src/interfaces';
 import * as import84 from '@angular/http/src/http';
 import * as import85 from 'ionic-angular/components/app/app-root';
+import * as import86 from 'angular2-jwt/angular2-jwt';
 class AppModuleInjector extends import0.NgModuleInjector<import1.AppModule> {
   _CommonModule_0:import2.CommonModule;
   _ApplicationModule_1:import3.ApplicationModule;
@@ -166,6 +167,7 @@ class AppModuleInjector extends import0.NgModuleInjector<import1.AppModule> {
   __UrlSerializer_72:any;
   __DeepLinker_73:any;
   __Policies_74:import44.Policies;
+  __AuthHttp_75:any;
   constructor(parent:import45.Injector) {
     super(parent,[
       import46.ActionSheetCmpNgFactory,
@@ -389,6 +391,10 @@ class AppModuleInjector extends import0.NgModuleInjector<import1.AppModule> {
     if ((this.__Policies_74 == (null as any))) { (this.__Policies_74 = new import44.Policies(this._Http_50,this.parent.get(import61.NgZone))); }
     return this.__Policies_74;
   }
+  get _AuthHttp_75():any {
+    if ((this.__AuthHttp_75 == (null as any))) { (this.__AuthHttp_75 = import1.getAuthHttp(this._Http_50)); }
+    return this.__AuthHttp_75;
+  }
   createInternal():import1.AppModule {
     this._CommonModule_0 = new import2.CommonModule();
     this._ApplicationModule_1 = new import3.ApplicationModule();
@@ -499,6 +505,7 @@ class AppModuleInjector extends import0.NgModuleInjector<import1.AppModule> {
     if ((token === import66.UrlSerializer)) { return this._UrlSerializer_72; }
     if ((token === import67.DeepLinker)) { return this._DeepLinker_73; }
     if ((token === import44.Policies)) { return this._Policies_74; }
+    if ((token === import86.AuthHttp)) { return this._AuthHttp_75; }
     return notFoundResult;
   }
   destroyInternal():void {

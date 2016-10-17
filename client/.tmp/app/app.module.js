@@ -4,6 +4,18 @@ import { MyApp } from './app.component';
 import { Summaries } from '../pages/summaries/summaries';
 import { Search } from '../pages/search/search';
 import { Policies } from '../providers/policies/policies';
+import { Storage } from '@ionic/storage';
+import { AuthHttp, AuthConfig } from 'angular2-jwt';
+import { Http } from '@angular/http';
+var storage = new Storage();
+export function getAuthHttp(http) {
+    return new AuthHttp(new AuthConfig({
+        headerPrefix: "Bearer",
+        noJwtError: true,
+        globalHeaders: [{ 'Accept': 'application/json' }],
+        tokenGetter: (function () { return storage.get('id_token'); }),
+    }), http);
+}
 export var AppModule = (function () {
     function AppModule() {
     }
@@ -24,7 +36,12 @@ export var AppModule = (function () {
                         Search
                     ],
                     providers: [
-                        Policies
+                        Policies,
+                        {
+                            provide: AuthHttp,
+                            useFactory: getAuthHttp,
+                            deps: [Http]
+                        }
                     ]
                 },] },
     ];

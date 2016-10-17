@@ -93,6 +93,7 @@ import * as import82 from '@angular/core/src/change_detection/differs/keyvalue_d
 import * as import83 from '@angular/http/src/interfaces';
 import * as import84 from '@angular/http/src/http';
 import * as import85 from 'ionic-angular/components/app/app-root';
+import * as import86 from 'angular2-jwt/angular2-jwt';
 var AppModuleInjector = (function (_super) {
     __extends(AppModuleInjector, _super);
     function AppModuleInjector(parent) {
@@ -616,6 +617,16 @@ var AppModuleInjector = (function (_super) {
         enumerable: true,
         configurable: true
     });
+    Object.defineProperty(AppModuleInjector.prototype, "_AuthHttp_75", {
+        get: function () {
+            if ((this.__AuthHttp_75 == null)) {
+                (this.__AuthHttp_75 = import1.getAuthHttp(this._Http_50));
+            }
+            return this.__AuthHttp_75;
+        },
+        enumerable: true,
+        configurable: true
+    });
     AppModuleInjector.prototype.createInternal = function () {
         this._CommonModule_0 = new import2.CommonModule();
         this._ApplicationModule_1 = new import3.ApplicationModule();
@@ -874,6 +885,9 @@ var AppModuleInjector = (function (_super) {
         }
         if ((token === import44.Policies)) {
             return this._Policies_74;
+        }
+        if ((token === import86.AuthHttp)) {
+            return this._AuthHttp_75;
         }
         return notFoundResult;
     };
