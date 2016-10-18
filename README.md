@@ -23,7 +23,14 @@ $ npm install -g ionic
 $ npm install -g cordova
 ```
 
-Test application:
+Test web application:
 ```sh
 $ ionic serve
 ```
+
+Android emulator test:
+```sh
+$ ionic build android
+$ ionic run android
+```
+
