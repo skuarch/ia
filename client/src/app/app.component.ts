@@ -2,6 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from 'ionic-native';
 
+import { Home } from '../pages/home/home';
 import { Summaries } from '../pages/summaries/summaries';
 import { Search } from '../pages/search/search';
 
@@ -9,7 +10,7 @@ import { Search } from '../pages/search/search';
 @Component({
   templateUrl: 'app.html'
 })
-export class MyApp {
+export class PolicyApp {
   @ViewChild(Nav) nav: Nav;
 
   rootPage: any = Summaries;
@@ -19,8 +20,8 @@ export class MyApp {
   constructor(public platform: Platform) {
     this.initializeApp();
 
-    // used for an example of ngFor and navigation
     this.pages = [
+      { title: 'Home', component: Home },
       { title: 'Summaries', component: Summaries },
       { title: 'Search', component: Search }
     ];
