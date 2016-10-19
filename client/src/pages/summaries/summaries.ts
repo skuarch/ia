@@ -6,14 +6,6 @@ import {Policies} from '../../providers/policies/policies';
   templateUrl: 'summaries.html'
 })
 export class Summaries {
-  policies: any;
-
   constructor(private policiesService: Policies) {
-  }
-
-  ionViewLoaded() {
-    this.policiesService.getPolicies().then((data) => {
-      this.policies = data;
-    });
   }
 }
