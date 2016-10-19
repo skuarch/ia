@@ -48,37 +48,37 @@ import * as import40 from 'ionic-angular/components/item/item';
 import * as import41 from 'ionic-angular/components/menu/menu-close';
 import * as import42 from '../node_modules/ionic-angular/components/item/item.ngfactory';
 import * as import43 from 'ionic-angular/util/form';
-var renderType_MyApp_Host:import0.RenderComponentType = (null as any);
-class _View_MyApp_Host0 extends import1.AppView<any> {
+var renderType_PolicyApp_Host:import0.RenderComponentType = (null as any);
+class _View_PolicyApp_Host0 extends import1.AppView<any> {
   _el_0:any;
   /*private*/ _appEl_0:import2.AppElement;
-  _MyApp_0_4:import3.MyApp;
+  _PolicyApp_0_4:import3.PolicyApp;
   constructor(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import2.AppElement) {
-    super(_View_MyApp_Host0,renderType_MyApp_Host,import6.ViewType.HOST,viewUtils,parentInjector,declarationEl,import7.ChangeDetectorStatus.CheckAlways);
+    super(_View_PolicyApp_Host0,renderType_PolicyApp_Host,import6.ViewType.HOST,viewUtils,parentInjector,declarationEl,import7.ChangeDetectorStatus.CheckAlways);
   }
   createInternal(rootSelector:string):import2.AppElement {
     this._el_0 = this.selectOrCreateHostElement('ng-component',rootSelector,(null as any));
     this._appEl_0 = new import2.AppElement(0,(null as any),this,this._el_0);
-    var compView_0:any = viewFactory_MyApp0(this.viewUtils,this.injector(0),this._appEl_0);
-    this._MyApp_0_4 = new import3.MyApp(this.parentInjector.get(import8.Platform));
-    this._appEl_0.initComponent(this._MyApp_0_4,[],compView_0);
-    compView_0.create(this._MyApp_0_4,this.projectableNodes,(null as any));
+    var compView_0:any = viewFactory_PolicyApp0(this.viewUtils,this.injector(0),this._appEl_0);
+    this._PolicyApp_0_4 = new import3.PolicyApp(this.parentInjector.get(import8.Platform));
+    this._appEl_0.initComponent(this._PolicyApp_0_4,[],compView_0);
+    compView_0.create(this._PolicyApp_0_4,this.projectableNodes,(null as any));
     this.init([].concat([this._el_0]),[this._el_0],[],[]);
     return this._appEl_0;
   }
   injectorGetInternal(token:any,requestNodeIndex:number,notFoundResult:any):any {
-    if (((token === import3.MyApp) && (0 === requestNodeIndex))) { return this._MyApp_0_4; }
+    if (((token === import3.PolicyApp) && (0 === requestNodeIndex))) { return this._PolicyApp_0_4; }
     return notFoundResult;
   }
 }
-function viewFactory_MyApp_Host0(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import2.AppElement):import1.AppView<any> {
-  if ((renderType_MyApp_Host === (null as any))) { (renderType_MyApp_Host = viewUtils.createRenderComponentType('',0,import9.ViewEncapsulation.None,[],{})); }
-  return new _View_MyApp_Host0(viewUtils,parentInjector,declarationEl);
+function viewFactory_PolicyApp_Host0(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import2.AppElement):import1.AppView<any> {
+  if ((renderType_PolicyApp_Host === (null as any))) { (renderType_PolicyApp_Host = viewUtils.createRenderComponentType('',0,import9.ViewEncapsulation.None,[],{})); }
+  return new _View_PolicyApp_Host0(viewUtils,parentInjector,declarationEl);
 }
-export const MyAppNgFactory:import10.ComponentFactory<import3.MyApp> = new import10.ComponentFactory<import3.MyApp>('ng-component',viewFactory_MyApp_Host0,import3.MyApp);
-const styles_MyApp:any[] = [];
-var renderType_MyApp:import0.RenderComponentType = (null as any);
-class _View_MyApp0 extends import1.AppView<import3.MyApp> {
+export const PolicyAppNgFactory:import10.ComponentFactory<import3.PolicyApp> = new import10.ComponentFactory<import3.PolicyApp>('ng-component',viewFactory_PolicyApp_Host0,import3.PolicyApp);
+const styles_PolicyApp:any[] = [];
+var renderType_PolicyApp:import0.RenderComponentType = (null as any);
+class _View_PolicyApp0 extends import1.AppView<import3.PolicyApp> {
   _viewQuery_Nav_0:import11.QueryList<any>;
   _el_0:any;
   /*private*/ _appEl_0:import2.AppElement;
@@ -124,7 +124,7 @@ class _View_MyApp0 extends import1.AppView<import3.MyApp> {
   /*private*/ _expr_4:any;
   /*private*/ _expr_5:any;
   constructor(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import2.AppElement) {
-    super(_View_MyApp0,renderType_MyApp,import6.ViewType.COMPONENT,viewUtils,parentInjector,declarationEl,import7.ChangeDetectorStatus.CheckAlways);
+    super(_View_PolicyApp0,renderType_PolicyApp,import6.ViewType.COMPONENT,viewUtils,parentInjector,declarationEl,import7.ChangeDetectorStatus.CheckAlways);
   }
   createInternal(rootSelector:string):import2.AppElement {
     const parentRenderNode:any = this.renderer.createViewRoot(this.declarationAppElement.nativeElement);
@@ -179,7 +179,7 @@ class _View_MyApp0 extends import1.AppView<import3.MyApp> {
     this._text_14 = this.renderer.createText(this._el_13,'\n      ',(null as any));
     this._anchor_15 = this.renderer.createTemplateAnchor(this._el_13,(null as any));
     this._appEl_15 = new import2.AppElement(15,13,this,this._anchor_15);
-    this._TemplateRef_15_5 = new import33.TemplateRef_(this._appEl_15,viewFactory_MyApp1);
+    this._TemplateRef_15_5 = new import33.TemplateRef_(this._appEl_15,viewFactory_PolicyApp1);
     this._NgFor_15_6 = new import17.NgFor(this._appEl_15.vcRef,this._TemplateRef_15_5,this.parentInjector.get(import34.IterableDiffers),this.ref);
     this._text_16 = this.renderer.createText(this._el_13,'\n    ',(null as any));
     this._text_17 = this.renderer.createText((null as any),'\n  ',(null as any));
@@ -203,7 +203,7 @@ class _View_MyApp0 extends import1.AppView<import3.MyApp> {
         this._text_18
       ]
     )],(null as any));
-    this._text_19 = this.renderer.createText(parentRenderNode,'\n\n\n\n',(null as any));
+    this._text_19 = this.renderer.createText(parentRenderNode,'\n\n',(null as any));
     this._text_20 = this.renderer.createText(parentRenderNode,'\n',(null as any));
     this._el_21 = this.renderer.createElement(parentRenderNode,'ion-nav',(null as any));
     this.renderer.setElementAttribute(this._el_21,'swipeBackEnabled','true');
@@ -311,11 +311,11 @@ class _View_MyApp0 extends import1.AppView<import3.MyApp> {
     this._Menu_0_4.ngOnDestroy();
   }
 }
-export function viewFactory_MyApp0(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import2.AppElement):import1.AppView<import3.MyApp> {
-  if ((renderType_MyApp === (null as any))) { (renderType_MyApp = viewUtils.createRenderComponentType('',0,import9.ViewEncapsulation.None,styles_MyApp,{})); }
-  return new _View_MyApp0(viewUtils,parentInjector,declarationEl);
+export function viewFactory_PolicyApp0(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import2.AppElement):import1.AppView<import3.PolicyApp> {
+  if ((renderType_PolicyApp === (null as any))) { (renderType_PolicyApp = viewUtils.createRenderComponentType('',0,import9.ViewEncapsulation.None,styles_PolicyApp,{})); }
+  return new _View_PolicyApp0(viewUtils,parentInjector,declarationEl);
 }
-class _View_MyApp1 extends import1.AppView<any> {
+class _View_PolicyApp1 extends import1.AppView<any> {
   _el_0:any;
   /*private*/ _appEl_0:import2.AppElement;
   _Item_0_4:import40.Item;
@@ -328,7 +328,7 @@ class _View_MyApp1 extends import1.AppView<any> {
   /*private*/ _expr_2:any;
   /*private*/ _expr_3:any;
   constructor(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import2.AppElement) {
-    super(_View_MyApp1,renderType_MyApp,import6.ViewType.EMBEDDED,viewUtils,parentInjector,declarationEl,import7.ChangeDetectorStatus.CheckAlways);
+    super(_View_PolicyApp1,renderType_PolicyApp,import6.ViewType.EMBEDDED,viewUtils,parentInjector,declarationEl,import7.ChangeDetectorStatus.CheckAlways);
   }
   createInternal(rootSelector:string):import2.AppElement {
     this._el_0 = this.renderer.createElement((null as any),'button',(null as any));
@@ -405,6 +405,6 @@ class _View_MyApp1 extends import1.AppView<any> {
     return ((true && pd_0) && pd_1);
   }
 }
-function viewFactory_MyApp1(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import2.AppElement):import1.AppView<any> {
-  return new _View_MyApp1(viewUtils,parentInjector,declarationEl);
+function viewFactory_PolicyApp1(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import2.AppElement):import1.AppView<any> {
+  return new _View_PolicyApp1(viewUtils,parentInjector,declarationEl);
 }
