@@ -7,8 +7,6 @@ import {Policies} from '../../providers/policies/policies';
 })
 export class Summaries {
   policies: any;
-  searchQuery: string = '';
-  items: Object[];
 
   constructor(private policiesService: Policies) {
   }
