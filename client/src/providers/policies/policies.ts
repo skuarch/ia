@@ -1,5 +1,4 @@
-import {Injectable, NgZone} from '@angular/core';
-import {Http} from '@angular/http';
+import {Injectable} from '@angular/core';
 import 'rxjs/add/operator/map';
 import PouchDB from 'pouchdb';
 import PouchDB_Plugin_QuickSearch from 'pouchdb-quick-search';

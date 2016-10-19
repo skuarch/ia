@@ -8,11 +8,6 @@ import { Home } from "../pages/home/home";
 import { Summaries } from '../pages/summaries/summaries';
 import { Search } from '../pages/search/search';
 
-///JWT Config
-import { AuthHttp, AuthConfig} from 'angular2-jwt';
-import { Http } from '@angular/http';
-import { Storage } from '@ionic/storage';
-
 
 @NgModule({
   declarations: [
