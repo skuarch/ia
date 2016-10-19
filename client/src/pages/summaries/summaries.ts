@@ -1,9 +1,5 @@
 import {Component} from "@angular/core";
-import {NavController, AlertController, Platform} from 'ionic-angular';
 import {Policies} from '../../providers/policies/policies';
-
-import { AuthHttp, tokenNotExpired } from 'angular2-jwt';
-import { InAppBrowser } from 'ionic-native';
 
 @Component({
   selector: 'page-summaries',
@@ -14,35 +10,12 @@ export class Summaries {
   searchQuery: string = '';
   items: Object[];
 
-  constructor(public platform: Platform, public authHttp: AuthHttp, private nav: NavController, private policiesService: Policies, private alertController: AlertController) {
-    //this.login();
+  constructor(private policiesService: Policies) {
   }
 
   ionViewLoaded() {
     this.policiesService.getPolicies().then((data) => {
       this.policies = data;
-    });
-  }
-
-  public login() {
-    if (!tokenNotExpired('access_token2')) {
-      this.platform.ready().then(() => {
-        this.loginProcess().then(success => {
-          // success
-        }, (error) => {
-          // error
-        });
-      });
-    }
-
-  }
-
-  public loginProcess(): Promise<any> {
-    return new Promise(function (resolve, reject) {
-      var browserRef = new InAppBrowser("172.25.36.74:8090:8090", "_blank", "location=no");
-      browserRef.on("loadstart").subscribe((event) => {      
-        resolve(true);
-      });
     });
   }
 }
