@@ -16,7 +16,7 @@ export function getAuthHttp(http) {
     headerPrefix: "Bearer",
     noJwtError: true,
     globalHeaders: [{'Accept': 'application/json'}],
-    tokenGetter: (() => storage.get('id_token')),
+    tokenGetter: (() => storage.get('access_token2')),
   }), http);
 }
 

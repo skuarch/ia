@@ -2,7 +2,7 @@ import {Component} from "@angular/core";
 import {NavController, AlertController, Platform} from 'ionic-angular';
 import {Policies} from '../../providers/policies/policies';
 
-import { AuthHttp } from 'angular2-jwt';
+import { AuthHttp, tokenNotExpired } from 'angular2-jwt';
 import { InAppBrowser } from 'ionic-native';
 
 @Component({
@@ -31,30 +31,38 @@ export class Summaries {
   }
 
   public login() {
-    this.platform.ready().then(() => {
-      this.loginProcess().then(success => {
-        // success
-      }, (error) => {
-        // error
+    alert(tokenNotExpired('access_token2'));
+    if (!tokenNotExpired('access_token2')) {
+      this.platform.ready().then(() => {
+        this.loginProcess().then(success => {
+          // success
+        }, (error) => {
+          // error
+        });
       });
-    });
+    }
+
   }
 
   public loginProcess(): Promise<any> {
     var counter = 0;
     var clientLanguage = "en";
+
     return new Promise(function (resolve, reject) {
-      var browserRef = new InAppBrowser("https://wd3.myworkday.com/astrazeneca/d/task/2998$2725.htmld", "_blank", "location=no");
+      var browserRef = new InAppBrowser("172.25.36.74:8090:8090", "_blank", "location=no");
+      
       browserRef.on("loadstart").subscribe((event) => {
-        if ((event.url).indexOf("https://wd3.myworkday.com/astrazeneca/d/task/2998$2725.htmld") === 0) {
-          counter += 1;
-          if (counter == 2) {
+      browserRef.executeScript({ code: "alert('asd')" });
+        resolve(true);
+       /* if ((event.url).indexOf("172.25.36.74:8090") === 0) {
+          //counter += 1;
+          //if (counter == 2) {
             browserRef.executeScript({ code: "alert(1); return 1;" })
-            .then(function (result) {clientLanguage = result});
+              .then(function (result) { clientLanguage = result });
             browserRef.close();
             resolve(clientLanguage);
-          }
-        }
+          //}
+        }*/
       });
     });
   }
