@@ -13,16 +13,6 @@ import { AuthHttp, AuthConfig} from 'angular2-jwt';
 import { Http } from '@angular/http';
 import { Storage } from '@ionic/storage';
 
-let storage = new Storage();
-
-export function getAuthHttp(http) {
-  return new AuthHttp(new AuthConfig({
-    headerPrefix: "Bearer",
-    noJwtError: true,
-    globalHeaders: [{'Accept': 'application/json'}],
-    tokenGetter: (() => storage.get('access_token2')),
-  }), http);
-}
 
 @NgModule({
   declarations: [
@@ -42,12 +32,7 @@ export function getAuthHttp(http) {
     Search
   ],
   providers: [
-    Policies,
-    {
-      provide: AuthHttp,
-      useFactory: getAuthHttp,
-      deps:[Http]
-    }
+    Policies
   ]
 })
 export class AppModule {}
