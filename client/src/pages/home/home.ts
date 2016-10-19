@@ -5,8 +5,6 @@ import {Component} from "@angular/core";
   templateUrl: 'home.html'
 })
 export class Home {
-  items: Object[];
-
   constructor() {
   }
 }
