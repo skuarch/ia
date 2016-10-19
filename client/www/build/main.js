@@ -102613,7 +102613,7 @@ var __metadata$1 = (undefined && undefined.__metadata) || function (k, v) {
 var PolicyApp = (function () {
     function PolicyApp(platform) {
         this.platform = platform;
-        this.rootPage = Summaries;
+        this.rootPage = Home;
         this.initializeApp();
         this.pages = [
             { title: 'Home', component: Home },

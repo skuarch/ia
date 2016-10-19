@@ -13,7 +13,7 @@ import { Search } from '../pages/search/search';
 export class PolicyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = Summaries;
+  rootPage: any = Home;
 
   pages: Array<{ title: string, component: any }>;
 
