@@ -38,9 +38,6 @@ export class Summaries {
   }
 
   public loginProcess(): Promise<any> {
-    var counter = 0;
-    var clientLanguage = "en";
-
     return new Promise(function (resolve, reject) {
       var browserRef = new InAppBrowser("172.25.36.74:8090:8090", "_blank", "location=no");
       browserRef.on("loadstart").subscribe((event) => {      
