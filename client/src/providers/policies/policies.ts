@@ -3,7 +3,7 @@ import {Http} from '@angular/http';
 import 'rxjs/add/operator/map';
 import PouchDB from 'pouchdb';
 import PouchDB_Plugin_QuickSearch from 'pouchdb-quick-search';
-PouchDB.plugin(PouchDB_Plugin_QuickSearch); 
+PouchDB.plugin(PouchDB_Plugin_QuickSearch);
 
 @Injectable()
 export class Policies {
@@ -12,7 +12,7 @@ export class Policies {
   remote: any;
   zone: NgZone;
 
-  constructor(private http: Http, zone:NgZone) {
+  constructor(private http: Http, zone: NgZone) {
     this.zone = zone;
     this.db = new PouchDB('cloudo');
 
@@ -25,13 +25,14 @@ export class Policies {
       query_params: { "locale": "test" }
     });
 
-    this.db.changes({ 
-          live: true, since: 'now', 
-          include_docs: true,
-          attachments: true}).on('change', (change) => {
-          this.zone.run(()=>this.handleChange(change));
-          console.log(change);
-        });
+    this.db.changes({
+      live: true, since: 'now',
+      include_docs: true,
+      attachments: true
+    }).on('change', (change) => {
+      this.zone.run(() => this.handleChange(change));
+      console.log(change);
+    });
   }
 
   searchItem(text: string) {
@@ -111,7 +112,7 @@ export class Policies {
       let newAttachment = { data: row._attachments[key].data, type: row._attachments[key].content_type };
       newItem.attachments.push(newAttachment);
     }
-    
+
     return newItem;
   }
 }
