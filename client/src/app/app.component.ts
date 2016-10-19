@@ -25,26 +25,11 @@ export class PolicyApp {
       { title: 'Summaries', component: Summaries },
       { title: 'Search', component: Search }
     ];
-
   }
 
   initializeApp() {
     this.platform.ready().then(() => {
       StatusBar.styleDefault();
-
-      var notificationOpenedCallback = function (jsonData) {
-        console.log('didReceiveRemoteNotificationCallBack: ' + JSON.stringify(jsonData));
-      };
-
-      if (window["plugins"]) {
-        window["plugins"].OneSignal
-          .startInit("2a9cbe61-3dd7-4b61-b0e4-bb1ec7f2163d", "739697796337")
-          .handleNotificationOpened(notificationOpenedCallback)
-          .endInit();
-
-        // Show an alert box if a notification comes in when the user is in your app.
-        window["plugins"].OneSignal.enableInAppAlertNotification(true);
-      }
     });
   }
 
