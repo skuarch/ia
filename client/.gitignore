@@ -3,3 +3,5 @@ www/build/
 npm-debug.log
 platforms/android/.gradle/
 platforms/android/assets/www/build/
+platforms/android/CordovaLib/
+www/assets/
