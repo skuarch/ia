@@ -1,0 +1,17 @@
+{
+    "menu": {
+        "title": "Menu"
+    },
+
+    "home": {
+        "title": "Home"
+    },
+
+    "search": {
+        "title": "Search"
+    },
+
+    "summaries": {
+        "title": "Policy summaries"
+    }
+}
