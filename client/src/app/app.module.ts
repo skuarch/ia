@@ -1,27 +1,29 @@
 import { NgModule } from '@angular/core';
 import { IonicApp, IonicModule } from 'ionic-angular';
-import { PolicyApp } from './app.component';
-import { Policies } from '../providers/policies/policies';
+import { iValue } from './app.component';
 
-// Pages
+// pages
 import { Home } from "../pages/home/home";
 import { Summaries } from '../pages/summaries/summaries';
 import { Search } from '../pages/search/search';
 
+// providers
+import { Policies } from '../providers/policies/policies';
+
 
 @NgModule({
   declarations: [
-    PolicyApp,
+    iValue,
     Home,
     Summaries,
     Search
   ],
   imports: [
-    IonicModule.forRoot(PolicyApp)
+    IonicModule.forRoot(iValue)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    PolicyApp,
+    iValue,
     Home,
     Summaries,
     Search

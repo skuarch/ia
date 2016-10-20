@@ -26,8 +26,8 @@
         <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
     </feature>
     <name>policy</name>
-    <description>Policy prototype</description>
-    <author email="jccastrejon@gmail.com" href="http://jccastrejon.mx/">Juan Castrejón</author>
+    <description>iValue</description>
+    <author email="als@astrazeneca.com" href="https://als.astrazeneca.com">ALS AstraZeneca</author>
     <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />

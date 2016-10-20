@@ -10,7 +10,7 @@ import { Search } from '../pages/search/search';
 @Component({
   templateUrl: 'app.html'
 })
-export class PolicyApp {
+export class iValue {
   @ViewChild(Nav) nav: Nav;
 
   rootPage: any = Home;

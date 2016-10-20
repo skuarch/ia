@@ -1,7 +1,7 @@
 {
-  "name": "ionic-hello-world",
-  "author": "Ionic Framework",
-  "homepage": "http://ionicframework.com/",
+  "name": "iValue",
+  "author": "ALS",
+  "homepage": "https://als.astrazeneca.com",
   "private": true,
   "scripts": {
     "build": "ionic-app-scripts build",
@@ -32,7 +32,7 @@
     "rollup-plugin-node-globals": "^1.0.9",
     "typescript": "^2.0.3"
   },
-  "description": "policy: An Ionic project",
+  "description": "iValue",
   "cordovaPlugins": [
     "cordova-plugin-device",
     "cordova-plugin-console",
