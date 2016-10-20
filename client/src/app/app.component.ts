@@ -1,6 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from 'ionic-native';
+import {TranslateService} from 'ng2-translate/ng2-translate';
 
 import { Home } from '../pages/home/home';
 import { Summaries } from '../pages/summaries/summaries';
@@ -17,7 +18,7 @@ export class iValue {
 
   pages: Array<{ title: string, component: any }>;
 
-  constructor(public platform: Platform) {
+  constructor(public translate: TranslateService, public platform: Platform) {
     this.initializeApp();
 
     this.pages = [
@@ -30,6 +31,8 @@ export class iValue {
   initializeApp() {
     this.platform.ready().then(() => {
       StatusBar.styleDefault();
+      this.translate.setDefaultLang('en');
+      this.translate.use('en');
     });
   }
 
