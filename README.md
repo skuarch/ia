@@ -23,6 +23,14 @@ $ npm install -g ionic
 $ npm install -g cordova
 ```
 
+Pre-requisites:
+```sh
+$ npm install
+$ sudo chown -R <user> * // only for linux
+$ sudo ionic hooks add // only for linux
+```
+
+
 Test web application:
 ```sh
 $ ionic serve
