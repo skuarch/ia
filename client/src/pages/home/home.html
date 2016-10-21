@@ -1,10 +1,79 @@
 <ion-header>
-    <ion-navbar secondary no-border-bottom>
-        <ion-title>{{'home.title' | translate}}</ion-title>
+    <ion-navbar>
+        <img src="assets/img/AZ_SYMBOL_RGB.png" width="50px" />
+        <ion-title></ion-title>
         <ion-buttons end>
             <button menuToggle>
               <ion-icon name="menu"></ion-icon>   
             </button>
-          </ion-buttons>
+        </ion-buttons>
     </ion-navbar>
 </ion-header>
+
+<ion-content class="home">
+    <ion-grid>
+        <!-- Search -->
+        <ion-row>
+            <ion-col>
+                <ion-searchbar>
+                </ion-searchbar>
+            </ion-col>
+        </ion-row>
+
+        <!-- News -->
+        <ion-row>
+            <ion-col>
+                <ion-card>
+                    <ion-card-header>
+                        {{'home.news.header' | translate}}
+                    </ion-card-header>
+                    <ion-card-content>
+                        {{'home.news.latest' | translate}}
+                        <ion-card>
+                            <ion-card-header>
+                                New ways of working
+                                <ion-card-content>
+                                    asdasdasdasdasdasda
+                                </ion-card-content>
+                            </ion-card-header>
+                        </ion-card>
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+
+        <!-- Main sections -->
+        <ion-row responsive-sm>
+            <ion-col width-50>
+                <ion-card>
+                    <ion-card-header>
+                        Policies
+                    </ion-card-header>
+                </ion-card>
+            </ion-col>
+            <ion-col width-50>
+                <ion-card>
+                    <ion-card-header>
+                        Code of conduct
+                    </ion-card-header>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+        <ion-row responsive-sm>
+            <ion-col width-50>
+                <ion-card>
+                    <ion-card-header>
+                        FAQs
+                    </ion-card-header>
+                </ion-card>
+            </ion-col>
+            <ion-col width-50>
+                <ion-card>
+                    <ion-card-header>
+                        Quiz
+                    </ion-card-header>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

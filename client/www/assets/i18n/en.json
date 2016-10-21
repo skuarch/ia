@@ -4,7 +4,11 @@
     },
 
     "home": {
-        "title": "Home"
+        "title": "Home",
+        "news": {
+            "header": "News",
+            "latest": "Latest update"
+        }
     },
 
     "search": {
