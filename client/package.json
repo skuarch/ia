@@ -14,9 +14,6 @@
     "electron": "electron .",
     "electron dist": "electron ."
   },
-  "config": {
-    "ionic_rollup": "./scripts/rollup.config.js"
-  },
   "dependencies": {
     "@angular/common": "2.0.0",
     "@angular/compiler": "2.0.0",
@@ -33,10 +30,7 @@
     "ionicons": "3.0.0",
     "ng2-translate": "^3.1.2",
     "rxjs": "5.0.0-beta.12",
-    "zone.js": "0.6.21",
-    "rollup-plugin-json": "^2.0.2",
-    "rollup-plugin-node-builtins": "^2.0.0",
-    "rollup-plugin-node-globals": "^1.0.9"
+    "zone.js": "0.6.21"
   },
   "devDependencies": {
     "@ionic/app-scripts": "^0.0.36",
