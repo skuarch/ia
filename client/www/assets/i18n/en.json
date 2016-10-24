@@ -30,5 +30,17 @@
 
     "quiz": {
         "title": "Quiz"
+    },
+
+    "report-concern": {
+        "title": "Report Concern"
+    },
+
+    "compliance-support": {
+        "title": "Compliance Support"
+    },
+
+    "offline-content": {
+        "title": "Offline Content"
     }
 }
