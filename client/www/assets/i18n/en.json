@@ -15,7 +15,19 @@
         "title": "Search"
     },
 
-    "summaries": {
-        "title": "Policy summaries"
+    "policies": {
+        "title": "Policies"
+    },
+
+    "conduct": {
+        "title": "Code of conduct"
+    },
+
+    "faqs": {
+        "title": "FAQs"
+    },
+
+    "quiz": {
+        "title": "Quiz"
     }
 }
