@@ -13,9 +13,7 @@ import { Search } from '../pages/search/search';
 })
 export class iValue {
   @ViewChild(Nav) nav: Nav;
-
   rootPage: any = Home;
-
   pages: Array<{ title: string, component: any }>;
 
   constructor(public translate: TranslateService, public platform: Platform) {
