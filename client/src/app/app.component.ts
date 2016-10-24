@@ -20,19 +20,34 @@ export class iValue {
 
   constructor(public translate: TranslateService, public platform: Platform) {
     this.initializeApp();
-
-    this.pages = [
-      { title: 'Home', component: Home },
-      { title: 'Summaries', component: Summaries },
-      { title: 'Search', component: Search }
-    ];
   }
 
   initializeApp() {
     this.platform.ready().then(() => {
+      this.initStyle();
+      this.initLanguage();
+      this.initMenu();
+    });
+  }
+
+  initStyle() {
+    if (StatusBar) {
       StatusBar.styleDefault();
-      this.translate.setDefaultLang('en');
-      this.translate.use('en');
+    }
+  }
+
+  initLanguage() {
+    this.translate.setDefaultLang('en');
+    this.translate.use('en');
+  }
+
+  initMenu() {
+    this.translate.get(['home.title', 'policies.title', 'search.title']).subscribe((results) => {
+      this.pages = [
+        { title: results['home.title'], component: Home },
+        { title: results['policies.title'], component: Summaries },
+        { title: results['search.title'], component: Search }
+      ];
     });
   }
 
