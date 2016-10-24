@@ -7,7 +7,8 @@
         "title": "Home",
         "news": {
             "header": "News",
-            "latest": "Latest update"
+            "latest": "Latest update",
+            "loading": "Loading latest news..."
         }
     },
 

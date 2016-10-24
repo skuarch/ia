@@ -31,9 +31,10 @@
                         {{'home.news.latest' | translate}}
                         <ion-card>
                             <ion-card-header>
-                                New ways of working
+                                <div *ngIf="!latestNews">{{'home.news.loading' | translate}}</div>
+                                <div *ngIf="latestNews">{{latestNews.title}}</div>
                                 <ion-card-content>
-                                    asdasdasdasdasdasda
+                                    <div *ngIf="latestNews">{{latestNews.summary}}</div>
                                 </ion-card-content>
                             </ion-card-header>
                         </ion-card>
