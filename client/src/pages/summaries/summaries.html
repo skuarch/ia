@@ -1,6 +1,6 @@
 <ion-header>
     <ion-navbar secondary no-border-bottom>
-        <ion-title>{{'summaries.title' | translate}}</ion-title>
+        <ion-title>{{'policies.title' | translate}}</ion-title>
         <ion-buttons end>
             <button menuToggle>
               <ion-icon name="menu"></ion-icon>   
@@ -8,7 +8,18 @@
           </ion-buttons>
     </ion-navbar>
 </ion-header>
-
 <ion-content class="home">
+    <div *ngFor='let policy of policies' class="list">
+        
+        <div class="item item-divider">
+            group: {{policy.group.name}}            
+        </div>
 
+        <div *ngFor='let subGroup of policy.group.subGroup'>
+            <div class="item" href="#">
+                -subgroup: {{subGroup.name}}
+            </div>
+        </div>
+
+    </div>
 </ion-content>
