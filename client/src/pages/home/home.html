@@ -19,7 +19,9 @@
                 </ion-searchbar>
             </ion-col>
         </ion-row>
+    </ion-grid>
 
+    <ion-grid *ngIf="hasConnection">
         <!-- News -->
         <ion-row>
             <ion-col>
@@ -78,7 +80,7 @@
         </ion-row>
     </ion-grid>
 
-    <ion-grid>
+    <ion-grid *ngIf="hasConnection">
         <ion-row responsive-sm>
             <ion-col width-100>
                 <ion-card>
@@ -100,6 +102,18 @@
                 <ion-card>
                     <ion-card-header>
                         {{'report-concern.title' | translate}}
+                    </ion-card-header>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+    <ion-grid *ngIf="!hasConnection">
+        <ion-row>
+            <ion-col>
+                <ion-card>
+                    <ion-card-header>
+                        {{'offline-content.title' | translate}}
                     </ion-card-header>
                 </ion-card>
             </ion-col>
