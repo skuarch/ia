@@ -25,6 +25,9 @@
     <feature name="InAppBrowser">
         <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
     </feature>
+    <feature name="NetworkStatus">
+        <param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager" />
+    </feature>
     <name>policy</name>
     <description>iValue</description>
     <author email="als@astrazeneca.com" href="https://als.astrazeneca.com">ALS AstraZeneca</author>
