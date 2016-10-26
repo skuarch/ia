@@ -5,7 +5,7 @@
 
     "home": {
         "title": "Home",
-        "footer": "Footer",
+        "footer": "Version 0.1.0",
         "news": {
             "header": "News",
             "latest": "Latest update",
