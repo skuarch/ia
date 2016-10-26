@@ -46,6 +46,12 @@ ion-card ion-card-header {
       left: 25px;
     }
   }
+
+  &:not(.card-feature) .download-count {
+    position: absolute;
+    top: $gutter;
+    right: $gutter;
+  }
 }
 
 .card-block button {
