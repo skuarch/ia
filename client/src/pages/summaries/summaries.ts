@@ -6,57 +6,142 @@ import {Component} from "@angular/core";
 })
 export class Summaries {   
 
-    public policies: string = `
+    public json: string = `
 [{
   "group":{
-    "name": "group 1",
+    "name": "Bussiness Activity",
      "id": 1,
      "subGroup":[{
-       "name": "sub group name 1",
-       "id": 1,
-       "policy":
-       [
-         {
-           "title":"policy title 1",
-           "id": 1
-         },
-         {
-           "title":"policy title 2",
-           "id": 2
-         }
-       ]
-    },
-    {
-       "name": "sub group name 2",
-       "id": 1,
-       "policy":
-       [
-         {
-           "title":"policy title 5",
-           "id": 1
-         },
-         {
-           "title":"policy title 6",
-           "id": 2
-         }
-       ]
-    }],
-    "policies": [
-      {
-        "title":"policy title 3",
-        "id": 3
+         "name": "Meetings",
+         "id": 1,
+         "policy":
+         [
+           {
+             "title":"Policy Meetings 1",
+             "id": 1
+           },
+           {
+             "title":"Policy Meetings 2",
+             "id": 2
+           }
+         ]
       },
       {
-        "title":"policy title 4",
-        "id": 4
+         "name": "Appointments",
+         "id": 1,
+         "policy":
+         [
+           {
+             "title":"Policy Appointments 1",
+             "id": 3
+           },
+           {
+             "title":"Policy Appointments 2",
+             "id": 4
+           }
+         ]
+      },
+      {
+         "name": "Advisory Boards",
+         "id": 1,
+         "policy":
+         [
+           {
+             "title":"Policy Advisory Boards 1",
+             "id": 3
+           },
+           {
+             "title":"Policy Advisory Boards 2",
+             "id": 4
+           }
+         ]
+      }
+
+
+    ],
+    "policies": 
+    [
+      {
+        "title":"Policy Bussiness Activity 1",
+        "id": 5
+      },
+      {
+        "title":"Policy Bussiness Activity 2",
+        "id": 6
       }
     ]
   }          
-}]
+},
+{
+  "group":{
+    "name": "Compilance Area",
+     "id": 2,
+     "subGroup":[{
+         "name": "Items of value",
+         "id": 2,
+         "policy":
+         [
+           {
+             "title":"policy Items of value 1",
+             "id": 7
+           },
+           {
+             "title":"policy Items of value 2",
+             "id": 8
+           }
+         ]
+      },
+      {
+         "name": "Spend Limits",
+         "id": 3,
+         "policy":
+         [
+          {
+             "title":"Policy Spend Limits 1",
+             "id": 7
+           },
+           {
+             "title":"Policy Spend Limits 2",
+             "id": 8
+           }
+         ]
+      },
+      {
+         "name": "Expenses",
+         "id": 3,
+         "policy":
+         [
+          {
+             "title":"Policy Expenses 1",
+             "id": 7
+           },
+           {
+             "title":"Policy Expenses 2",
+             "id": 8
+           }
+         ]
+      }
+
+
+    ],
+    "policies": 
+    [
+      {
+        "title":"policy Compilance Area 1",
+        "id": 11
+      },
+      {
+        "title":"policy Compilance Area 2",
+        "id": 12
+      }
+    ]
+  }          
+}
+]
 `;
 
   constructor() {
-      this.policies = JSON.parse(this.policies)	;
+      this.json = JSON.parse(this.json)	;
   }
 
 }

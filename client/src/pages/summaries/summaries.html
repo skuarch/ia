@@ -9,17 +9,25 @@
     </ion-navbar>
 </ion-header>
 <ion-content class="home">
-    <div *ngFor='let policy of policies' class="list">
+    <div *ngFor='let groups of json' class="list">
         
         <div class="item item-divider">
-            group: {{policy.group.name}}            
+            group: {{groups.group.name}}            
         </div>
 
-        <div *ngFor='let subGroup of policy.group.subGroup'>
+        <div *ngFor='let subGroup of groups.group.subGroup'>
             <div class="item" href="#">
                 -subgroup: {{subGroup.name}}
+                <div *ngFor='let subGroupPolicies of subGroup.policy'>
+                    --{{subGroupPolicies.title}}
+                </div>
             </div>
         </div>
 
+        <div *ngFor='let groupPolicies of groups.group.policies' class="item" href="#">
+            {{groupPolicies.title}}
+        </div>        
+
     </div>
+
 </ion-content>
