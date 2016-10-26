@@ -6,6 +6,7 @@
     "home": {
         "title": "Home",
         "footer": "Version 0.1.0",
+        "offline": "You are currently offline",
         "news": {
             "header": "News",
             "latest": "Latest update",

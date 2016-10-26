@@ -1,4 +1,10 @@
 page-home {
+  .offline-header {
+    background-color: rgb(61, 73, 86);
+    color: white;
+    padding-left: 10px;
+  } 
+
   .home-header {
     background-color: darken($paper, 5);
     margin-bottom: 60px;

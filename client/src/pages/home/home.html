@@ -1,4 +1,7 @@
 <ion-content class="home">
+  <div class="offline-header" *ngIf="!hasConnection">
+    <ion-icon name="ios-alert-outline" color="secondary"></ion-icon> {{'home.offline' | translate}}
+  </div>
   <div class="home-header">
     <ion-grid class="container">
       <ion-row responsive-sm>
@@ -116,5 +119,4 @@
       <div class="footer">{{'home.footer' | translate}}</div>
     </ion-col>
   </ion-grid>
-
 </ion-content>
