@@ -1,130 +1,116 @@
-<ion-header>
-    <ion-navbar>
-        <img src="assets/img/AZ_SYMBOL_RGB.png" width="50px" />
-        <ion-title></ion-title>
-        <ion-buttons end>
-            <button menuToggle>
-              <ion-icon name="menu"></ion-icon>   
-            </button>
-        </ion-buttons>
-    </ion-navbar>
-</ion-header>
-
 <ion-content class="home">
-    <ion-grid>
-        <!-- Search -->
-        <ion-row>
-            <ion-col>
-                <ion-searchbar>
-                </ion-searchbar>
-            </ion-col>
-        </ion-row>
+  <div class="home-header">
+    <ion-grid class="container">
+      <ion-row responsive-sm>
+        <ion-col>
+          <img src="assets/img/az-logo.svg" class="logo" />
+          <ion-searchbar class="search"></ion-searchbar>
+        </ion-col>
+      </ion-row>
     </ion-grid>
+  </div>
 
-    <ion-grid *ngIf="hasConnection">
-        <!-- News -->
-        <ion-row>
-            <ion-col>
-                <ion-card>
-                    <ion-card-header>
-                        {{'home.news.header' | translate}}
-                    </ion-card-header>
-                    <ion-card-content>
-                        {{'home.news.latest' | translate}}
-                        <ion-card>
-                            <ion-card-header>
-                                <div *ngIf="!latestNews">{{'home.news.loading' | translate}}</div>
-                                <div *ngIf="latestNews">{{latestNews.title}}</div>
-                                <ion-card-content>
-                                    <div *ngIf="latestNews">{{latestNews.summary}}</div>
-                                </ion-card-content>
-                            </ion-card-header>
-                        </ion-card>
-                    </ion-card-content>
-                </ion-card>
-            </ion-col>
-        </ion-row>
+  <ion-grid class="container" *ngIf="hasConnection">
+    <ion-row responsive-sm>
+      <ion-col width-50>
+        <ion-card class="card-feature card-block">
+          <button>
+            <ion-card-header>
+              {{'home.news.header' | translate}}
+            </ion-card-header>
+            <h5>{{'home.news.latest' | translate}}</h5>
+          </button>
+          <ion-list>
+            <div *ngIf="!latestNews">{{'home.news.loading' | translate}}</div>
+            <button ion-item>
+              <ion-thumbnail item-left>
+                <img src="assets/img/stock/thumb-scientist.png" alt="">
+              </ion-thumbnail>
+              <h3 *ngIf="latestNews">{{latestNews.title}}</h3>
+              <p *ngIf="latestNews">{{latestNews.summary}}</p>
+            </button>
+            <button ion-item>
+              <ion-thumbnail item-left>
+                <img src="assets/img/stock/thumb-scientist.png" alt="">
+              </ion-thumbnail>
+              <h3 *ngIf="latestNews">{{latestNews.title}}</h3>
+              <p *ngIf="latestNews">{{latestNews.summary}}</p>
+            </button>
+            <button ion-item>
+              <ion-thumbnail item-left>
+                <img src="assets/img/stock/thumb-scientist.png" alt="">
+              </ion-thumbnail>
+              <h3 *ngIf="latestNews">{{latestNews.title}}</h3>
+              <p *ngIf="latestNews">{{latestNews.summary}}</p>
+            </button>
+          </ion-list>
+        </ion-card>
+        <!-- /.card-feature -->
+      </ion-col>
 
-        <!-- Main sections -->
-        <ion-row responsive-sm>
-            <ion-col width-50>
-                <ion-card>
-                    <ion-card-header>
-                        {{'policies.title' | translate}}
-                    </ion-card-header>
-                </ion-card>
-            </ion-col>
-            <ion-col width-50>
-                <ion-card>
-                    <ion-card-header>
-                        {{'conduct.title' | translate}}
-                    </ion-card-header>
-                </ion-card>
-            </ion-col>
-        </ion-row>
-        <ion-row responsive-sm>
-            <ion-col width-50>
-                <ion-card>
-                    <ion-card-header>
-                        {{'faqs.title' | translate}}
-                    </ion-card-header>
-                </ion-card>
-            </ion-col>
-            <ion-col width-50>
-                <ion-card>
-                    <ion-card-header>
-                        {{'quiz.title' | translate}}
-                    </ion-card-header>
-                </ion-card>
-            </ion-col>
-        </ion-row>
-    </ion-grid>
+      <ion-col width-50>
+        <ion-card class="card-block">
+          <button>
+            <ion-icon name="md-list-box" color="secondary"></ion-icon>
+            <ion-card-header>{{'policies.title' | translate}}</ion-card-header>
+          </button>
+          <button>
+            <ion-icon name="md-bookmarks" color="secondary"></ion-icon>
+            <ion-card-header>{{'conduct.title' | translate}}</ion-card-header>
+          </button>
+          <button>
+            <ion-icon name="md-chatbubbles" color="secondary"></ion-icon>
+            <ion-card-header>{{'faqs.title' | translate}}</ion-card-header>
+          </button>
+          <button>
+            <ion-icon name="md-school" color="secondary"></ion-icon>
+            <ion-card-header>{{'quiz.title' | translate}}</ion-card-header>
+          </button>
+        </ion-card>
+        <!-- /.card-block -->
 
-    <ion-grid *ngIf="hasConnection">
-        <ion-row responsive-sm>
-            <ion-col width-100>
-                <ion-card>
-                    <ion-card-header>
-                        {{'offline-content.title' | translate}}
-                    </ion-card-header>
-                </ion-card>
-            </ion-col>
-        </ion-row>
-        <ion-row responsive-sm>
-            <ion-col width-50>
-                <ion-card>
-                    <ion-card-header>
-                        {{'compliance-support.title' | translate}}
-                    </ion-card-header>
-                </ion-card>
-            </ion-col>
-            <ion-col width-50>
-                <ion-card>
-                    <ion-card-header>
-                        {{'report-concern.title' | translate}}
-                    </ion-card-header>
-                </ion-card>
-            </ion-col>
-        </ion-row>
-    </ion-grid>
+        <ion-card class="card-block">
+          <button class="large">
+            <ion-icon name="md-cloud-download" color="secondary"></ion-icon>
+            <div class="download-count">
+              <ion-icon name="md-cloud-download" color="white"></ion-icon>
+              <span>3 downloads</span>
+            </div>
+            <ion-card-header>{{'offline-content.title' | translate}}</ion-card-header>
+          </button>
+          <button>
+            <ion-icon name="md-people" color="secondary"></ion-icon>
+            <ion-card-header>{{'compliance-support.title' | translate}}</ion-card-header>
+          </button>
+          <button>
+            <ion-icon name="md-alert" color="secondary"></ion-icon>
+            <ion-card-header>{{'report-concern.title' | translate}}</ion-card-header>
+          </button>
+        </ion-card>
+        <!-- /.card-block -->
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
-    <ion-grid *ngIf="!hasConnection">
-        <ion-row>
-            <ion-col>
-                <ion-card>
-                    <ion-card-header>
-                        {{'offline-content.title' | translate}}
-                    </ion-card-header>
-                </ion-card>
-            </ion-col>
-        </ion-row>
-    </ion-grid>
+  <ion-grid class="container" *ngIf="!hasConnection">
+    <ion-row responsive-sm>
+      <ion-col width-50>
+        <ion-card class="card-feature card-block">
+          <button>
+            <ion-card-header>
+              {{'offline-content.title' | translate}}
+            </ion-card-header>
+          </button>
+        </ion-card>
+        <!-- /.card-feature -->
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
-    <ion-grid>
-        <ion-row>
-            <ion-col text-center>
-                {{'home.footer' | translate}}
-            </ion-col>
-        </ion-row>
-    </ion-grid>
+  <ion-grid class="container">
+    <ion-col width-100>
+      <div class="footer">Version 0.1.0</div>
+    </ion-col>
+  </ion-grid>
+
 </ion-content>

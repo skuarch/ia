@@ -1,0 +1,23 @@
+// md
+$searchbar-md-input-search-icon-size: 35px;
+$searchbar-md-input-border-radius: 45px;
+$searchbar-md-input-box-shadow: $shadow;
+$searchbar-md-input-search-icon-color: $gold;
+$searchbar-md-input-text-color: $ink;
+$searchbar-md-input-placeholder-color: $ink-light;
+$searchbar-md-input-clear-icon-color: $gold;
+
+// ios
+$searchbar-ios-input-search-icon-size: 35px;
+$searchbar-ios-input-border-radius: 45px;
+$searchbar-ios-input-box-shadow: $shadow;
+$searchbar-ios-input-search-icon-color: $gold;
+$searchbar-ios-input-text-color: $ink;
+$searchbar-ios-input-placeholder-color: $ink-light;
+$searchbar-ios-input-clear-icon-color: $gold;
+
+ion-searchbar.search {
+  .searchbar-input {
+    font-size: $gamma; // ion sass variable not working
+  }
+}
