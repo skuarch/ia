@@ -1,6 +1,7 @@
 <ion-content class="home">
   <div class="offline-header" *ngIf="!hasConnection">
-    <ion-icon name="ios-alert-outline" color="secondary"></ion-icon> {{'home.offline' | translate}}
+    <ion-icon name="md-alert" color="secondary"></ion-icon>
+    <h4>{{'home.offline' | translate}}</h4>
   </div>
   <div class="home-header">
     <ion-grid class="container">

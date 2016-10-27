@@ -1,10 +1,26 @@
 page-home {
+  // Offline header
   .offline-header {
-    background-color: rgb(61, 73, 86);
-    color: white;
-    padding-left: 10px;
-  } 
+    background-color: $ink;
+    box-shadow: $shadow-small;
+    position: relative;
+    text-align: center;
+    padding: 3px $gutter;
 
+    ion-icon,
+    h4 {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    h4 {
+      font-size: $epsilon;
+      color: white;
+      margin: 0 0 3px 5px;
+    }
+  }
+
+  // Header
   .home-header {
     background-color: darken($paper, 5);
     margin-bottom: 60px;
@@ -37,8 +53,6 @@ page-home {
       margin: 50px $gutter;
     }
   }
-
-  // --------------------------------------------------
 
   // Feature Card
   .card-feature {
