@@ -2,50 +2,91 @@
 // http://ionicframework.com/docs/v2/theming/
 @import "ionic.globals";
 
-
 // Shared Variables
-// --------------------------------------------------
-// To customize the look and feel of this app, you can override
-// the Sass variables found in Ionic's source scss files.
-// To view all the possible Ionic variables, see:
 // http://ionicframework.com/docs/v2/theming/overriding-ionic-variables/
 
-$text-color:        #000;
-$background-color:  #fff;
-
-
-// Named Color Variables
 // --------------------------------------------------
-// Named colors makes it easy to reuse colors on various components.
-// It's highly recommended to change the default colors
-// to match your app's branding. Ionic uses a Sass map of
-// colors so you can add, rename and remove colors as needed.
-// The "primary" color is the only required color in the map.
 
+// Colors
+$ink: #3D4956;
+$ink-light: #BDC8D2;
+$paper: #F0F3F6;
+
+$mulberry: #830051;
+$navy: #003865;
+$sky-blue: #00add0;
+$light-blue: #68d3df;
+$lime-green: #c4d600;
+$magenta: #d0006f;
+$gold: #f0ab00;
+$purple: #3c1053;
+$platinum: #9db0ac;
+$graphite: #3F4444;
+
+$text-color: #3D4956;
+$background-color: #F0F3F6;
+
+
+// Named colors
 $colors: (
-  primary:    #387ef5,
-  secondary:  #32db64,
+  primary:    $mulberry,
+  secondary:  $gold,
   danger:     #f53d3d,
-  light:      #f4f4f4,
-  dark:       #222,
+  light:      white,
+  dark:       $ink,
   favorite:   #69BB7B
 );
 
-
-// App Theme
 // --------------------------------------------------
-// Ionic apps can have different themes applied, which can
-// then be future customized. This import comes last
-// so that the above variables are used and Ionic's
-// default are overridden.
 
+// Type sizes
+$tera: 4.5rem; // 72px
+$giga: 3.75rem; // 60px
+$mega: 3rem; // 48px
+$alpha: 2.25rem; // 36px;
+$beta: 1.5rem; // 24px
+$gamma: 1.375rem; // 22px
+$delta: 1.125rem; // 18px
+$epsilon: 1rem; // 16px
+$zeta: 0.875rem; // 14px
+
+$font-size-root: 100%; // 16px
+
+// Grid
+$large: 1200px;
+$medium: 760px;
+$small: 650px;
+$max-width: $large;
+$gutter: 15px;
+
+$grid-responsive-lg-break: $large;
+$grid-responsive-md-break: $medium;
+$grid-responsive-sm-break: $small;
+
+// Custom styles
+$radius: 8px;
+$shadow: 0 2px 20px rgba($ink, 0.18);
+$shadow-dark: 0 2px 20px rgba($ink, 0.4);
+$shadow-small: 0 2px 10px rgba($ink, 0.2);
+$transition: 0.4s;
+
+// --------------------------------------------------
+
+// Default
 @import "ionic.theme.default";
 
+// Shared
+@import "shared/typography";
+@import "shared/grid";
 
-// Ionicons
-// --------------------------------------------------
-// The premium icon font for Ionic. For more info, please see:
-// http://ionicframework.com/docs/v2/ionicons/
+// Components
+@import "components/footer";
+@import "components/search";
+@import "components/cards";
+@import "components/lists";
+@import "components/downloads";
 
+
+// Ionicons - http://ionicframework.com/docs/v2/ionicons/
 $ionicons-font-path: "../assets/fonts";
 @import "ionicons";

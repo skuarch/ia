@@ -1,3 +1,137 @@
 page-home {
+  .offline-header {
+    background-color: rgb(61, 73, 86);
+    color: white;
+    padding-left: 10px;
+  } 
 
+  .home-header {
+    background-color: darken($paper, 5);
+    margin-bottom: 60px;
+
+    @media screen and (min-width: $small) {
+      padding-bottom: 45px;
+      margin-bottom: -45px;
+    }
+  }
+
+  ion-searchbar.search {
+    margin-bottom: -45px;
+
+    @media screen and (min-width: $small) {
+      top: 60px;
+      right: $gutter;
+      position: absolute;
+      width: 400px;
+    }
+  }
+
+  .logo {
+    display: table;
+    width: 80px;
+    margin: 30px auto 30px;
+
+    @media screen and (min-width: $small) {
+      width: 60px;
+      display: inline-block;
+      margin: 50px $gutter;
+    }
+  }
+
+  // --------------------------------------------------
+
+  // Feature Card
+  .card-feature {
+    box-shadow: $shadow-dark;
+    border: none;
+    margin-bottom: 0;
+
+    h5 {
+      font-size: $zeta;
+      font-weight: bold;
+      color: rgba(white, 0.6);
+    }
+
+    button {
+      width: 100%;
+      background-color: $mulberry;
+      color: white;
+      padding-bottom: 10px;
+      margin: 0;
+
+      &:hover {
+        background-color: darken($mulberry, 5);
+
+        ion-card-header {
+          color: white;
+        }
+      }
+
+      &:nth-of-type(odd) {
+        border-right: none;
+      }
+
+      &.item-block:last-child {
+        border-bottom: none;
+        border-radius: 0 0 $radius $radius;
+      }
+    }
+
+    ion-card-header {
+      color: white;
+      font-size: $mega;
+      width: 100%;
+      margin: $gutter 5px 80px;
+
+      @media screen and (min-width: $small) {
+        font-size: $giga;
+        margin-bottom: 120px;
+      }
+    }
+
+    ion-list  {
+    border-top: none;
+    width: 100%;
+
+      button.item {
+        padding: 10px $gutter;
+        background-color: darken($mulberry, 3);
+        border-top: 1px solid $mulberry;
+        display: none;
+
+        &:hover {
+          background-color: darken($mulberry, 5);
+        }
+
+        &:first-child {
+          border-top: none;
+          display: flex;
+        }
+
+        @media screen and (min-width: $small) {
+          display: flex;
+        }
+      }
+
+      ion-thumbnail img {
+        border-radius: $radius;
+        box-shadow: $shadow-small;
+      }
+
+      h5 {
+        margin-bottom: 0;
+      }
+
+      h3 {
+        color: white;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      p {
+        color: rgba(white, 0.7);
+        font-size: $epsilon;
+      }
+    }
+  }
 }

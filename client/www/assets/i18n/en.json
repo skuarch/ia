@@ -5,9 +5,12 @@
 
     "home": {
         "title": "Home",
+        "footer": "Version 0.1.0",
+        "offline": "You are currently offline",
         "news": {
             "header": "News",
-            "latest": "Latest update"
+            "latest": "Latest update",
+            "loading": "Loading latest news..."
         }
     },
 
@@ -39,11 +42,31 @@
         "title": "Compliance Support"
     },
 
-    "offline-content": {
-        "title": "Offline Content"
+    "policies": {
+        "title": "Policies"
     },
 
-    "search": {
-        "title": "Search"
+    "conduct": {
+        "title": "Code of conduct"
+    },
+
+    "faqs": {
+        "title": "FAQs"
+    },
+
+    "quiz": {
+        "title": "Quiz"
+    },
+
+    "report-concern": {
+        "title": "Report Concern"
+    },
+
+    "compliance-support": {
+        "title": "Compliance Support"
+    },
+
+    "offline-content": {
+        "title": "Offline Content"
     }
 }

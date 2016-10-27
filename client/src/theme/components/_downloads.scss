@@ -1,0 +1,19 @@
+.download-count {
+  border-radius: $radius / 2;
+  background-color: $sky-blue;
+  font-size: $zeta;
+  padding: 10px 10px 10px 38px;
+  margin-bottom: 10px;
+  color: white;
+  font-weight: bold;
+  box-shadow: $shadow-small;
+  display: table;
+  position: relative;
+
+  ion-icon {
+    font-size: $gamma;
+    position: absolute;
+    left: 10px;
+    top: 6px;
+  }
+}

@@ -12,6 +12,7 @@ import { Summaries } from '../pages/summaries/summaries';
 import { Search } from '../pages/search/search';
 
 // providers
+import { NewsProvider } from '../providers/news/newsProvider';
 import { Policies } from '../providers/policies/policies';
 
 export function translateLoaderFactory(http: Http) {
@@ -43,6 +44,7 @@ export function translateLoaderFactory(http: Http) {
     Search
   ],
   providers: [
+    NewsProvider,
     Policies
   ]
 })

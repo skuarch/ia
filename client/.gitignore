@@ -5,3 +5,5 @@ platforms/android/.gradle/
 platforms/android/assets/www/build/
 platforms/android/CordovaLib/build/
 node_modules/
+platforms/
+._*

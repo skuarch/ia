@@ -1,0 +1,101 @@
+// md
+$card-md-background-color: white;
+$card-md-border-radius: $radius;
+$card-md-box-shadow: $shadow;
+$card-md-margin-top: 0;
+$card-md-margin-bottom: 20px;
+$card-md-header-color: $ink;
+$card-md-header-font-size: $gamma;
+$card-md-header-padding: 0;
+
+// ios
+$card-ios-background-color: white;
+$card-ios-border-radius: $radius;
+$card-ios-box-shadow: $shadow;
+$card-ios-margin-top: 0;
+$card-ios-margin-bottom: 20px;
+$card-ios-header-color: $ink;
+$card-ios-header-font-size: $gamma;
+$card-ios-header-padding: 0;
+
+ion-card ion-card-header {
+  font-weight: bold;
+  letter-spacing: -0.5px;
+  line-height: 1;
+  transition: $transition;
+}
+
+.card-block {
+  display: flex;
+  flex-wrap: wrap;
+
+  ion-card-header {
+    margin-top: 90px;
+    white-space: normal;
+    text-overflow: inherit;
+  }
+
+  ion-icon {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    font-size: 55px;
+
+    @media screen and (min-width: $small) {
+      top: 25px;
+      left: 25px;
+    }
+  }
+
+  &:not(.card-feature) .download-count {
+    position: absolute;
+    top: $gutter;
+    right: $gutter;
+  }
+}
+
+.card-block button {
+  position: relative;
+  padding: $gutter;
+  width: 50%;
+  margin: 0;
+  background-color: white;
+  text-align: left;
+  transition: $transition;
+  border-top: 2px solid darken($background-color, 5);
+
+  @media screen and (min-width: $small) {
+    padding: 20px;
+  }
+
+  &:hover {
+    background-color: lighten($background-color, 2);
+
+    ion-card-header {
+      color: $mulberry;
+    }
+  }
+
+  &:nth-of-type(odd) {
+    border-right: 2px solid darken($background-color, 5);
+  }
+
+  &:first-of-type,
+  &:nth-of-type(2) {
+    border-top: none;
+  }
+}
+
+.card-block button.large {
+  width: 100%;
+  border-right: none;
+
+  & + button {
+    border-top: 2px solid darken($background-color, 5);
+
+    & + button {
+      border-left: 2px solid darken($background-color, 5);
+      border-right: none;
+    }
+  }
+}
