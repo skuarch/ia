@@ -52,6 +52,8 @@ $zeta: 0.875rem; // 14px
 
 $font-size-root: 100%; // 16px
 
+$font-bold: 700;
+
 // Grid
 $large: 1200px;
 $medium: 760px;
@@ -72,19 +74,25 @@ $transition: 0.4s;
 
 // --------------------------------------------------
 
-// Default
-@import "ionic.theme.default";
+// Layout
+@import "layout/grid";
+@import "layout/typography";
 
-// Shared
-@import "shared/typography";
-@import "shared/grid";
+// Global
+@import "global/header";
+@import "global/footer";
+@import "global/search";
+@import "global/menu";
 
 // Components
-@import "components/footer";
-@import "components/search";
 @import "components/cards";
 @import "components/lists";
 @import "components/downloads";
+
+// Ionic theme
+@import "ionic.theme.default";
+
+
 
 
 // Ionicons - http://ionicframework.com/docs/v2/ionicons/

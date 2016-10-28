@@ -1,0 +1,37 @@
+[class*="header"] {
+  box-shadow: $shadow-small;
+  background-color: $mulberry;
+
+  .toolbar-title {
+    font-weight: $font-bold;
+    text-align: center;
+    font-size: $gamma;
+  }
+
+  button {
+    background-color: transparent;
+    font-size: $alpha;
+  }
+
+  ion-navbar {
+    max-width: $max-width;
+    margin: auto;
+  }
+}
+
+.header-large {
+
+  ion-navbar {
+    align-items: stretch;
+  }
+
+  .toolbar-title {
+    text-align: left;
+    font-size: $mega;
+    white-space: normal;
+    text-overflow: inherit;
+    margin-top: 70px;
+    margin-bottom: 30px;
+    letter-spacing: -1px;
+  }
+}

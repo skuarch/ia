@@ -62,7 +62,7 @@ page-home {
 
     h5 {
       font-size: $zeta;
-      font-weight: bold;
+      font-weight: $font-bold;
       color: rgba(white, 0.6);
     }
 
@@ -138,7 +138,7 @@ page-home {
 
       h3 {
         color: white;
-        font-weight: bold;
+        font-weight: $font-bold;
         margin-bottom: 5px;
       }
 
