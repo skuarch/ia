@@ -8,7 +8,7 @@ import {TranslateLoader} from "ng2-translate";
 
 // pages
 import { Home } from "../pages/home/home";
-import { Summaries } from '../pages/summaries/summaries';
+import { Policy } from '../pages/policy/policy';
 import { Search } from '../pages/search/search';
 
 // providers
@@ -23,7 +23,7 @@ export function translateLoaderFactory(http: Http) {
   declarations: [
     iValue,
     Home,
-    Summaries,
+    Policy,
     Search
   ],
   imports: [
@@ -40,7 +40,7 @@ export function translateLoaderFactory(http: Http) {
   entryComponents: [
     iValue,
     Home,
-    Summaries,
+    Policy,
     Search
   ],
   providers: [

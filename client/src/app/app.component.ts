@@ -4,7 +4,7 @@ import { StatusBar } from 'ionic-native';
 import {TranslateService} from 'ng2-translate/ng2-translate';
 
 import { Home } from '../pages/home/home';
-import { Summaries } from '../pages/summaries/summaries';
+import { Policy } from '../pages/policy/policy';
 import { Search } from '../pages/search/search';
 
 
@@ -43,7 +43,7 @@ export class iValue {
     this.translate.get(['home.title', 'policies.title', 'search.title']).subscribe((results) => {
       this.pages = [
         { title: results['home.title'], component: Home },
-        { title: results['policies.title'], component: Summaries },
+        { title: results['policies.title'], component: Policy },
         { title: results['search.title'], component: Search }
       ];
     });
