@@ -52,7 +52,8 @@ $zeta: 0.875rem; // 14px
 
 $font-size-root: 100%; // 16px
 
-$font-bold: 700;
+$font-bold: 500;
+$font-black: 700;
 
 // Grid
 $large: 1200px;
@@ -77,6 +78,7 @@ $transition: 0.4s;
 // Layout
 @import "layout/grid";
 @import "layout/typography";
+@import "layout/content";
 
 // Global
 @import "global/header";

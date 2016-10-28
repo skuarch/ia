@@ -7,7 +7,6 @@ $card-md-margin-bottom: 20px;
 $card-md-header-color: $ink;
 $card-md-header-font-size: $gamma;
 $card-md-header-padding: 0;
-$card-md-header-font-weight: $font-bold;
 
 // ios
 $card-ios-background-color: white;
@@ -18,12 +17,19 @@ $card-ios-margin-bottom: 20px;
 $card-ios-header-color: $ink;
 $card-ios-header-font-size: $gamma;
 $card-ios-header-padding: 0;
-$card-ios-header-font-weight: $font-bold;
 
-ion-card ion-card-header {
-  letter-spacing: -0.5px;
-  line-height: 1;
-  transition: $transition;
+ion-card {
+  background-color: white;
+
+  &[class*="card-"] [class*="item-"].item-block .item-inner:not(:last-child) {
+    border-bottom: 1px solid $paper;
+  }
+
+  ion-card-header {
+    letter-spacing: -0.5px;
+    line-height: 1;
+    transition: $transition;
+  }
 }
 
 .card-block {
@@ -34,6 +40,7 @@ ion-card ion-card-header {
     margin-top: 90px;
     white-space: normal;
     text-overflow: inherit;
+    font-weight: $font-bold;
   }
 
   ion-icon {
@@ -95,4 +102,8 @@ ion-card ion-card-header {
     border-top: 2px solid darken($background-color, 5);
 
     & + button {
-      border-left: 2px solid darken($backgr
+      border-left: 2px solid darken($background-color, 5);
+      border-right: none;
+    }
+  }
+}
