@@ -1,0 +1,34 @@
+<ion-header>
+    <ion-navbar secondary no-border-bottom>
+        <ion-title>{{'policies.title' | translate}}</ion-title>
+        <ion-buttons end>
+            <button menuToggle>
+              <ion-icon name="menu"></ion-icon>   
+            </button>
+          </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<br/><br/>
+
+<ion-content>
+    <ion-item-group *ngFor='let section of array'>
+      <ion-item-divider color="light">
+        {{section.name}}
+      </ion-item-divider>
+      <ion-item *ngFor='let subsection of section.subsections'>
+        <ion-icon name="md-folder" item-left></ion-icon>
+        {{subsection.name}}
+        <br/>        
+        <ion-item *ngFor='let policy of subsection.policies'>
+          <ion-icon name="md-document" item-left></ion-icon>
+            {{policy.title}}
+        </ion-item>
+      </ion-item>      
+      <ion-item *ngFor='let policy of section.policies'>
+        <ion-icon name="md-document" item-left></ion-icon>
+        {{policy.title}}
+      </ion-item>
+    </ion-item-group>
+</ion-content>
+

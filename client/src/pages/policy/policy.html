@@ -1,34 +1,75 @@
-<ion-header>
-    <ion-navbar secondary no-border-bottom>
-        <ion-title>{{'policies.title' | translate}}</ion-title>
-        <ion-buttons end>
-            <button menuToggle>
-              <ion-icon name="menu"></ion-icon>   
-            </button>
-          </ion-buttons>
-    </ion-navbar>
-</ion-header>
-
-<br/><br/>
-
 <ion-content>
-    <ion-item-group *ngFor='let section of array'>
-      <ion-item-divider color="light">
-        {{section.name}}
-      </ion-item-divider>
-      <ion-item *ngFor='let subsection of section.subsections'>
-        <ion-icon name="md-folder" item-left></ion-icon>
-        {{subsection.name}}
-        <br/>        
-        <ion-item *ngFor='let policy of subsection.policies'>
-          <ion-icon name="md-document" item-left></ion-icon>
-            {{policy.title}}
-        </ion-item>
-      </ion-item>      
-      <ion-item *ngFor='let policy of section.policies'>
-        <ion-icon name="md-document" item-left></ion-icon>
-        {{policy.title}}
-      </ion-item>
-    </ion-item-group>
-</ion-content>
+  <ion-header class="header-large">
+    <ion-navbar secondary no-border-bottom color="primary">
+      <ion-buttons end>
+        <button menuToggle>
+          <ion-icon name="md-menu" color="secondary"></ion-icon>
+        </button>
+      </ion-buttons>
+      <ion-title>{{'policies.title' | translate}}</ion-title>
+    </ion-navbar>
+  </ion-header>
 
+  <ion-grid class="container">
+    <ion-row responsive-sm>
+      <ion-col width-33 class="list-container" *ngFor='let section of array'>
+        <ion-list-header>{{section.name}}</ion-list-header>
+        <ion-card>
+          <ion-list>
+            <ion-item *ngFor='let subsection of section.subsections'>
+              <button ion-item class="unread">
+                {{subsection.name}}
+                <ion-icon name="ios-arrow-forward" item-right color="ink-light"></ion-icon>
+              </button>
+              <ion-list class="sublist-container">
+                <button ion-item *ngFor='let policy of subsection.policies'>
+                  {{policy.title}}
+                  <ion-icon name="ios-arrow-forward" item-right color="ink-light"></ion-icon>
+                </button>
+              </ion-list>
+            </ion-item>
+            <ion-item *ngFor='let policy of section.policies'>
+              <button ion-item>
+                {{policy.title}}
+              </button>
+            </ion-item>
+          </ion-list>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <ion-row responsive-sm>
+      <ion-col width-33 class="list-container">
+        <ion-list-header>This is a tester for sub list styles</ion-list-header>
+        <ion-card>
+          <ion-list>
+            <ion-item>
+              <button ion-item class="unread">
+                Tester
+                <ion-icon name="ios-arrow-forward" item-right color="ink-light"></ion-icon>
+              </button>
+              <ion-list class="sublist-container">
+                <button ion-item class="unread">
+                  Subtester
+                  <ion-icon name="ios-arrow-forward" item-right color="ink-light"></ion-icon>
+                </button>
+              </ion-list>
+            </ion-item>
+            <ion-item>
+              <button ion-item>
+                Tester 2
+                <ion-icon name="ios-arrow-forward" item-right color="ink-light"></ion-icon>
+              </button>
+            </ion-item>
+          </ion-list>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid class="container">
+    <ion-col width-100>
+      <div class="footer">{{'home.footer' | translate}}</div>
+    </ion-col>
+  </ion-grid>
+</ion-content>
