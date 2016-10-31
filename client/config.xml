@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <widget id="com.ionicframework.policy856093" version="0.0.8" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>policy</name>
+  <name>iValue</name>
   <description>iValue</description>
   <author email="als@astrazeneca.com" href="https://als.astrazeneca.com">ALS AstraZeneca</author>
   <content src="index.html"/>
