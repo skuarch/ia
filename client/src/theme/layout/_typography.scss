@@ -1,2 +1,7 @@
-$headings-font-weight: bold;
+$headings-font-weight: $font-black;
+$h3-font-size: $gamma;
 $h5-font-size: $zeta;
+
+ion-label {
+  font-weight: $font-black;
+}

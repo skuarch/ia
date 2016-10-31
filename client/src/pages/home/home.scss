@@ -70,7 +70,7 @@ page-home {
       width: 100%;
       background-color: $mulberry;
       color: white;
-      padding-bottom: 10px;
+      padding-bottom: 5px;
       margin: 0;
 
       &:hover {
@@ -103,6 +103,14 @@ page-home {
       }
     }
 
+    ion-list-header {
+      padding: 0;
+
+      ion-label {
+        color: rgba(white, 0.7);
+      }
+    }
+
     ion-list  {
     border-top: none;
     width: 100%;
@@ -111,6 +119,7 @@ page-home {
         padding: 10px $gutter;
         background-color: darken($mulberry, 3);
         border-top: 1px solid $mulberry;
+        border-bottom: none;
         display: none;
 
         &:hover {
@@ -132,13 +141,9 @@ page-home {
         box-shadow: $shadow-small;
       }
 
-      h5 {
-        margin-bottom: 0;
-      }
-
       h3 {
         color: white;
-        font-weight: $font-bold;
+        font-weight: $font-black;
         margin-bottom: 5px;
       }
 

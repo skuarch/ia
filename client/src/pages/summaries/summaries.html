@@ -12,15 +12,108 @@
 
   <ion-grid class="container">
     <ion-row responsive-sm>
-      <ion-col width-50>
+      <ion-col width-33 class="list-container">
+        <ion-list-header>Business Activity</ion-list-header>
         <ion-card>
           <ion-list>
-            <ion-item>Tester</ion-item>
-            <ion-item>Tester</ion-item>
-            <ion-item>Tester</ion-item>
+            <ion-item>
+              <button ion-item>
+                Meetings
+                <ion-icon name="ios-arrow-forward" item-right color="ink-light"></ion-icon>
+              </button>
+            </ion-item>
+            <ion-item>
+              <button ion-item>
+                Appointments
+                <ion-icon name="ios-arrow-forward" item-right color="ink-light"></ion-icon>
+              </button>
+            </ion-item>
+            <ion-item>
+              <button ion-item>
+                Advisory Board
+                <ion-icon name="ios-arrow-forward" item-right color="ink-light"></ion-icon>
+              </button>
+            </ion-item>
+          </ion-list>
+        </ion-card>
+      </ion-col>
+
+      <ion-col width-33 class="list-container">
+        <ion-list-header>Compliance Area</ion-list-header>
+        <ion-card>
+          <ion-list>
+            <ion-item>
+              <button ion-item>
+                Meetings
+                <ion-icon name="ios-arrow-forward" item-right color="ink-light"></ion-icon>
+              </button>
+            </ion-item>
+            <ion-item>
+              <button ion-item>
+                Appointments
+                <ion-icon name="ios-arrow-forward" item-right color="ink-light"></ion-icon>
+              </button>
+            </ion-item>
+            <ion-item>
+              <button ion-item>
+                Advisory Board
+                <ion-icon name="ios-arrow-forward" item-right color="ink-light"></ion-icon>
+              </button>
+            </ion-item>
+          </ion-list>
+        </ion-card>
+      </ion-col>
+
+      <ion-col width-33 class="list-container">
+        <ion-list-header>Location</ion-list-header>
+        <ion-card>
+          <ion-list>
+            <ion-item>
+              <button ion-item>
+                Global
+                <ion-icon name="ios-arrow-forward" item-right color="ink-light"></ion-icon>
+              </button>
+            </ion-item>
+            <ion-item>
+              <button ion-item>
+                Local
+                <ion-icon name="ios-arrow-forward" item-right color="ink-light"></ion-icon>
+              </button>
+            </ion-item>
           </ion-list>
         </ion-card>
       </ion-col>
     </ion-row>
+    
+    <ion-row responsive-sm>
+      <ion-col width-33 class="list-container">
+        <ion-list-header>This is a tester for sub list styles</ion-list-header>
+        <ion-card>
+          <ion-list>
+            <ion-item>
+              <button ion-item class="unread">
+                Test
+                <ion-icon name="ios-arrow-forward" item-right color="ink-light"></ion-icon>
+              </button>
+              <ion-list class="sublist-container">
+
+              </ion-list>
+            </ion-item>
+            <ion-item>
+              <button ion-item>
+                Global
+                <ion-icon name="ios-arrow-forward" item-right color="ink-light"></ion-icon>
+              </button>
+            </ion-item>
+          </ion-list>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid class="container">
+    <ion-col width-100>
+      <div class="footer">{{'home.footer' | translate}}</div>
+    </ion-col>
   </ion-grid>
 </ion-content>

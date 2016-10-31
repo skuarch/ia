@@ -33,7 +33,7 @@
             <ion-card-header>
               {{'home.news.header' | translate}}
             </ion-card-header>
-            <h5>{{'home.news.latest' | translate}}</h5>
+            <ion-list-header>{{'home.news.latest' | translate}}</ion-list-header>
           </button>
           <ion-list>
             <div *ngIf="!latestNews">{{'home.news.loading' | translate}}</div>
@@ -65,19 +65,19 @@
 
       <ion-col width-50>
         <ion-card class="card-block">
-          <button>
+          <button ion-item>
             <ion-icon name="md-list-box" color="secondary"></ion-icon>
             <ion-card-header>{{'policies.title' | translate}}</ion-card-header>
           </button>
-          <button>
+          <button ion-item>
             <ion-icon name="md-bookmarks" color="secondary"></ion-icon>
             <ion-card-header>{{'conduct.title' | translate}}</ion-card-header>
           </button>
-          <button>
+          <button ion-item>
             <ion-icon name="md-chatbubbles" color="secondary"></ion-icon>
             <ion-card-header>{{'faqs.title' | translate}}</ion-card-header>
           </button>
-          <button>
+          <button ion-item>
             <ion-icon name="md-school" color="secondary"></ion-icon>
             <ion-card-header>{{'quiz.title' | translate}}</ion-card-header>
           </button>
@@ -85,7 +85,7 @@
         <!-- /.card-block -->
 
         <ion-card class="card-block">
-          <button class="large">
+          <button class="large" ion-item>
             <ion-icon name="md-cloud-download" color="secondary"></ion-icon>
             <div class="download-count">
               <ion-icon name="md-cloud-download" color="white"></ion-icon>
@@ -93,11 +93,11 @@
             </div>
             <ion-card-header>{{'offline-content.title' | translate}}</ion-card-header>
           </button>
-          <button>
+          <button ion-item>
             <ion-icon name="md-people" color="secondary"></ion-icon>
             <ion-card-header>{{'compliance-support.title' | translate}}</ion-card-header>
           </button>
-          <button>
+          <button ion-item>
             <ion-icon name="md-alert" color="secondary"></ion-icon>
             <ion-card-header>{{'report-concern.title' | translate}}</ion-card-header>
           </button>

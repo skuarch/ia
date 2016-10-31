@@ -1,21 +1,78 @@
 // md
 $item-md-thumbnail-size: 4rem;
 $list-md-background-color: white;
-$label-md-margin: 0;
 
 // ios
 $item-ios-thumbnail-size: 4rem;
 $list-ios-background-color: white;
-$label-ios-margin: 0;
+
+.list-container {
+  @media screen and (max-width: $small) {
+    ion-row:first-child &:first-child ion-list-header ion-label {
+      color: rgba(white, 0.7);
+    }
+
+    ion-card {
+      margin-bottom: 0;
+    }
+  }
+}
 
 ion-list {
+  ion-item.item {
+    min-height: 68px;
+    border-bottom: 1px solid $paper;
+    padding-left: 0;
+    position: relative;
 
+    @media screen and (min-width: $small) {
+
+    }
+
+    ion-label {
+      
+    }
+
+    button {
+      padding-left: 25px;
+    }
+
+    ion-icon.item-icon {
+      font-size: $gamma;
+      margin-top: 15px;
+      min-height: 0;
+    }
+  }
+
+  // Resets
+  ion-item.item-block.item > .item-inner {
+    padding: 0;
+
+    ion-label {
+      margin: 0;
+    }
+  }
+
+  &.list-md > button.item:first-child,
+  &.list-md > ion-item.item:first-child {
+    border-top: none;
+  }
+
+  &.list-md > button.item:last-child,
+  &.list-md > ion-item.item:last-child {
+    border-bottom: none;
+  }
 }
 
-ion-item {
-  background-color: white;
-}
+ion-list-header.item {
+  background-color: transparent;
+  padding: 0 10px;
+  min-height: 0;
+  border-bottom: none;
 
-ion-label {
-  font-weight: $font-bold;
+  ion-label {
+    font-size: $zeta;
+    margin: 0 0 7px;
+    color: darken($ink-light, 25);
+  }
 }

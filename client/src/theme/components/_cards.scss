@@ -5,7 +5,7 @@ $card-md-box-shadow: $shadow;
 $card-md-margin-top: 0;
 $card-md-margin-bottom: 20px;
 $card-md-header-color: $ink;
-$card-md-header-font-size: $gamma;
+$card-md-header-font-size: $beta;
 $card-md-header-padding: 0;
 
 // ios
@@ -15,20 +15,21 @@ $card-ios-box-shadow: $shadow;
 $card-ios-margin-top: 0;
 $card-ios-margin-bottom: 20px;
 $card-ios-header-color: $ink;
-$card-ios-header-font-size: $gamma;
+$card-ios-header-font-size: $beta;
 $card-ios-header-padding: 0;
 
 ion-card {
   background-color: white;
 
-  &[class*="card-"] [class*="item-"].item-block .item-inner:not(:last-child) {
-    border-bottom: 1px solid $paper;
-  }
-
   ion-card-header {
+    font-weight: $font-black;
     letter-spacing: -0.5px;
     line-height: 1;
     transition: $transition;
+
+    ion-label {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -40,7 +41,6 @@ ion-card {
     margin-top: 90px;
     white-space: normal;
     text-overflow: inherit;
-    font-weight: $font-bold;
   }
 
   ion-icon {
@@ -64,7 +64,7 @@ ion-card {
 
 .card-block button {
   position: relative;
-  padding: $gutter;
+  padding: 10px $gutter;
   width: 50%;
   margin: 0;
   background-color: white;
@@ -73,7 +73,7 @@ ion-card {
   border-top: 2px solid darken($background-color, 5);
 
   @media screen and (min-width: $small) {
-    padding: 20px;
+    padding: 10px 20px $gutter;
   }
 
   &:hover {
@@ -92,6 +92,19 @@ ion-card {
   &:nth-of-type(2) {
     border-top: none;
   }
+}
+
+.unread::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: $magenta;
 }
 
 .card-block button.large {
