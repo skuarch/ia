@@ -22,12 +22,12 @@
         <br/>        
         <ion-item *ngFor='let policy of subsection.policies'>
           <ion-icon name="md-document" item-left></ion-icon>
-            {{policy.title}}
+            <a href="#" (click)='openPage(policy)'>{{policy.title}}</a>
         </ion-item>
       </ion-item>      
       <ion-item *ngFor='let policy of section.policies'>
         <ion-icon name="md-document" item-left></ion-icon>
-        {{policy.title}}
+        <a href="#" (click)='openPage(policy)'>{{policy.title}}</a>
       </ion-item>
     </ion-item-group>
 </ion-content>

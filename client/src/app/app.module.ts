@@ -10,6 +10,7 @@ import {TranslateLoader} from "ng2-translate";
 import { Home } from "../pages/home/home";
 import { Policy } from '../pages/policy/policy';
 import { Search } from '../pages/search/search';
+import { PolicyDetails } from '../pages/policy/policy-details';
 
 // providers
 import { NewsProvider } from '../providers/news/newsProvider';
@@ -24,7 +25,8 @@ export function translateLoaderFactory(http: Http) {
     iValue,
     Home,
     Policy,
-    Search
+    Search,
+    PolicyDetails
   ],
   imports: [
     IonicModule.forRoot(iValue),
@@ -41,7 +43,8 @@ export function translateLoaderFactory(http: Http) {
     iValue,
     Home,
     Policy,
-    Search
+    Search,
+    PolicyDetails
   ],
   providers: [
     NewsProvider,

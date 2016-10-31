@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ModalController } from 'ionic-angular';
-import { NavController, NavParams } from 'ionic-angular';
+import { PolicyDetails } from './policy-details';
 
 @Component({
     templateUrl: 'policy.html'
@@ -128,9 +128,9 @@ this.array = JSON.parse(this.array);
     }
 
 
-   openPage(){
-    //let modal = this.modalCtrl.create(ModalPage);
-    //modal.present();
+   openPage(policy){
+    let modal = this.modalCtrl.create(PolicyDetails, {"policy":policy});
+    modal.present();
   }
   
 }
