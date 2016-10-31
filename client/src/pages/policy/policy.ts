@@ -8,6 +8,7 @@ import { PolicyDetails } from './policy-details';
 export class Policy {
 
     public array: string;
+    public isPolicyDisplayed = false;
 
     constructor(public modalCtrl: ModalController){
        this.array =
@@ -128,9 +129,26 @@ this.array = JSON.parse(this.array);
     }
 
 
-   openPage(policy){
+  openPage(policy){
     let modal = this.modalCtrl.create(PolicyDetails, {"policy":policy});
     modal.present();
+  }
+
+  showPolicies(subsection){
+
+      if(this.isPolicyDisplayed){
+          this.isPolicyDisplayed = false;
+      }else{
+          this.isPolicyDisplayed = true;
+      }
+
+      console.log("se deben de mostrar las politicas", subsection);
+      var policies: any = subsection.policies;
+      for(let policy of policies){   
+          let element = 'policy' + policy.id;
+          let button = document.getElementById('' + element + '');                    
+          console.log("button ",button);
+      }
   }
   
 }
